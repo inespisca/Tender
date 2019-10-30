@@ -31,7 +31,7 @@ class App extends Component {
         })
       })
   }
-  
+
   render () {
     return (
       <BrowserRouter>
@@ -40,7 +40,7 @@ class App extends Component {
           <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser = {this.getUser}/> }/>
           <Route exact path="/settings" component={Settings}/>
           <Route exact path="/messages" component={Messages}/>
-          <Route exact path="/chat" component={Chat}/>
+          <Route exact path="/chat" component={Chat} />
       </Switch>
       </BrowserRouter>
     );
@@ -48,9 +48,3 @@ class App extends Component {
 }
 
 export default App;
-
-// results.gender
-//results.name.first
-//results.name.last
-//results.dob.age 
-//results.picture
