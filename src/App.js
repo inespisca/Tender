@@ -81,6 +81,18 @@ class App extends Component {
       })
   }
 
+<<<<<<< HEAD
+  render () {
+    return (
+      <BrowserRouter>
+      <NavBar/>
+      <Switch>
+          <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser = {this.getUser}/> }/>
+          <Route exact path="/settings" component={Settings}/>
+          <Route exact path="/messages" component={Messages}/>
+          <Route exact path="/chat" component={Chat} />
+      </Switch>
+=======
   getUsers = () => {
     fetch("https://randomuser.me/api/?results=5")
       .then(response => response.json())
@@ -103,15 +115,10 @@ class App extends Component {
           <Route exact path="/settings" component={Settings} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} />} />
         </Switch>
+>>>>>>> 49e80fbb06c5eb3a7d2ce2b725bd1543884cb6b4
       </BrowserRouter>
     );
   }
 }
 
 export default App;
-
-// results.gender
-//results.name.first
-//results.name.last
-//results.dob.age 
-//results.picture
