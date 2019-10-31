@@ -12,14 +12,6 @@ class Chat extends Component {
       };
     }
 
-    // const printNewMessage = () => {
-    //     // sent time
-
-    //     //sent message
-    //     return <p> Your message will apppear here:  {sentMessages} </p>
-
-    // }
-
     showCurrentlyTyping = e => {
         this.setState({userMessage: e.target.value});
     } 
@@ -35,6 +27,12 @@ class Chat extends Component {
         })
     }
     
+    // currentDate = () => {
+    //   let now = new Date(); 
+    //   console.log('im here')
+    //   return `${now.getHours()} : ${now.getMinutes()}`
+        
+    // }
     
   
 
@@ -42,7 +40,7 @@ class Chat extends Component {
     return (
         <>
         <div>
-            <ChatMessages sentMessages={this.state.sentMessages}/> 
+            <ChatMessages sentMessages={this.state.sentMessages} /*currentDate={this.currentDate}*//> 
         </div>
         <form className= "chat-chatForm">
             <input type="text" className="chat-textInput" value={this.state.userMessage} onChange={this.showCurrentlyTyping}/>

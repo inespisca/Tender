@@ -1,12 +1,14 @@
 import React from "react"
+import "./ChatMessages.css"
 
-const ChatMessage = ({sentMessages}) => (
+const ChatMessage = ({sentMessages, currentDate}) => (
+
 
     sentMessages.map ( message => (
-             <>
-             <p> </p>
-            <h1> {message} </h1>
-            </>
+             <div className="chatMessages-newMessage">
+             <p>{currentDate} </p>
+            <h1 className="chatMessages-text"> {message} </h1>
+            </div>
         )  
     )
     

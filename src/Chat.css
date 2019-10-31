@@ -1,20 +1,26 @@
 .chat-chatForm{
-display: flex;
-justify-content: space-between;
- margin: 10%; 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 5vw;
+    display: flex;
+    /* justify-content: space-between; */
+
+
 }
 
 .chat-textInput{
-    width:60%;
-    height: 100px; 
+    width:70%;
+    height: 8vw; 
 }
 
 .chat-sendButton{
-    width:10%;
+    /* width:10%; */
     border-style: none;
     border-radius: 5px;
     background-color:#EC9993;
-    padding: 1%; 
+    /* padding: 1%;  */
     font-family: Gotham rounded;
 }
 

@@ -1,0 +1,8 @@
+.chatMessages-newMessage{
+    border-radius: 5px;
+    background-color: lightgreen;
+}
+
+.chatMessages-text{
+    text-align: end;
+}
