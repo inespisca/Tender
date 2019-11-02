@@ -1,11 +1,12 @@
 import React from 'react';
 import './Messages.css';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 
 const Messages = ({ randomUsers }) => {
     return (
-        <div className="ui container comments">
+        <div className="container messagess">
             {
                 randomUsers.map(user => {
                     return (
@@ -21,7 +22,7 @@ const Messages = ({ randomUsers }) => {
                                     <span className="date">Today at 6:00PM</span>
                                 </div>
                                 <div key={user.name} className="text">{user.message ? user.message : "You are developper, that's cool. I'm studying at the Wild Code School."}</div>
-
+                                <Link to="/chat">Chat</Link>
                             </div>
                         </div>
 
