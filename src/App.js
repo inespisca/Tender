@@ -24,9 +24,9 @@ const ourselves = [
       last: 'Oliveira',
     },
     picture: {
-      thumbnail: 'https://via.placeholder.com/50',
+      thumbnail: 'ines-tn.jpg',
     },
-    message: 'Heyyyyyyy ;)',
+    message: "You make my booleans come true!! I would love have a date with you tonight but I am studying Web development at Wild Code School and I have to study hard these next few days to do well in my group's project. Would next week be a good time for our date?",
   },
   {
     name: {
@@ -45,7 +45,7 @@ const ourselves = [
       last: 'Riet',
     },
     picture: {
-      thumbnail: '/angelinariet-tn.jpg',
+      thumbnail: '/angelina-tn.jpg',
     },
     message: 'Salut! :)',
   },

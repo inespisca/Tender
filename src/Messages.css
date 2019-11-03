@@ -5,3 +5,13 @@
 .avatar{
     border-radius: 50px;
 }
+
+.date{
+    font-size:0.8em;
+}
+
+a:hover{
+    background-color:grey;
+    border-radius: 10px;
+    opacity:0.4;
+}
