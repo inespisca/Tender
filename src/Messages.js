@@ -6,32 +6,43 @@ import { Link } from 'react-router-dom';
 
 const Messages = ({ randomUsers }) => {
     return (
-        <div className="container messagess">
+        <div className="containerMessagess">
             {
                 randomUsers.map(user => {
                     return (
-                        <div key={user.name.first} className="comment">
-                            <a href="/" className="avatar">
-                                <img src={user.picture.thumbnail} alt="Tender user" />
-                            </a>
-                            <div className="content">
-                                <a href="/" className="author">
-                                    {user.name.first} {user.name.last}
-                                </a>
-                                <div className="metadata">
-                                    <span className="date">Today at 6:00PM</span>
+                        <div class="container">
+                            <div key={user.name.first}>
+                                <div class="row no-gutters">
+                                    <div class="col-md-1">
+                                        <a href="/chat">
+                                            <img src={user.picture.thumbnail} alt="Tender user" className="avatar" />
+                                        </a>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <a href="/chat">
+                                            {user.name.first}{user.name.last}
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="chat" key={user.name} className="text">
+                                            {user.message ? user.message : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Sed non risus. Suspendisse lectus torto"}
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3" className="date">
+                                        Today at 6:00PM
+                                    </div>
                                 </div>
-                                <div key={user.name} className="text">{user.message ? user.message : "You are developper, that's cool. I'm studying at the Wild Code School."}</div>
-                                <Link to="/chat">Chat</Link>
                             </div>
                         </div>
-
                     )
                 })
             }
         </div>
-
-    );
+    )
 };
+
+
+
+
 
 export default Messages; 

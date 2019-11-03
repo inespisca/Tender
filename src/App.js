@@ -45,7 +45,7 @@ const ourselves = [
       last: 'Riet',
     },
     picture: {
-      thumbnail: 'https://via.placeholder.com/50',
+      thumbnail: '/angelinariet-tn.jpg',
     },
     message: 'Salut! :)',
   },
@@ -83,7 +83,7 @@ class App extends Component {
   }
 
   getUsers = () => {
-    fetch("https://randomuser.me/api/?results=5")
+    fetch("https://randomuser.me/api/?results=10")
       .then(response => response.json())
       .then(data => {
         this.setState({
@@ -104,7 +104,7 @@ class App extends Component {
           <Route exact path="/settings" component={Settings} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} />} />
           <Route exact path="/chat" component={Chat} />
-      </Switch>
+        </Switch>
 
       </BrowserRouter>
     );
