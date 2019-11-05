@@ -27,12 +27,7 @@ class Chat extends Component {
         })
     }
     
-    // currentDate = () => {
-    //   let now = new Date(); 
-    //   console.log('im here')
-    //   return `${now.getHours()} : ${now.getMinutes()}`
-        
-    // }
+ 
     
   
 

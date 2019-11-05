@@ -17,6 +17,7 @@ const ourselves = [
       thumbnail: 'https://via.placeholder.com/50',
     },
     message: 'Hey handsome! How are you?',
+    date: 'test'
   },
   {
     name: {
@@ -27,6 +28,7 @@ const ourselves = [
       thumbnail: 'ines-tn.jpg',
     },
     message: "You make my booleans come true!! I would love have a date with you tonight but I am studying Web development at Wild Code School and I have to study hard these next few days to do well in my group's project. Would next week be a good time for our date?",
+    date:'test'
   },
   {
     name: {
@@ -37,6 +39,7 @@ const ourselves = [
       thumbnail: 'https://via.placeholder.com/50',
     },
     message: 'Holà que tal',
+    date :'test'
   },
 
   {
@@ -48,6 +51,7 @@ const ourselves = [
       thumbnail: '/angelina-tn.jpg',
     },
     message: 'Salut! :)',
+    date:'blabla'
   },
 ]
 
@@ -95,7 +99,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.randomUsers)
     return (
       <BrowserRouter>
         <NavBar />
