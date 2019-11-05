@@ -14,21 +14,21 @@ const Messages = ({ randomUsers }) => {
                             <div key={user.name.first}>
                                 <div class="row">
                                     <div class="col-md-1" >
-                                        <a href="/chat">
+                                        <Link to="/chat">
                                             <img src={user.picture.thumbnail} alt="Tender user" className="avatar" />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div class="col-md-2">
-                                        <a href="/chat" classNam>
+                                        <Link to="/chat" className>
                                             {user.name.first} {user.name.last}
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div class="col-md-5  text-justify">
-                                        <a href="/chat" key={user.name} className="text">
+                                        <Link to="/chat" key={user.name} className="text">
                                             {user.message ? user.message : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Sed non risus. Suspendisse lectus torto"}
-                                        </a>
+                                        </Link>
                                     </div>
-                                    <div class="col-md-2" className="date"> Today at 6:00PM </div>
+                                    <div class="col-md-2" className="date"> {user.date ? user.date : "Today at 6:00PM"} </div>
                                 </div>
                             </div>
                         </div>
