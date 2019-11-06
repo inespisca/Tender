@@ -7,7 +7,7 @@ const Settings = ({ settings, onChange }) => {
         <div>
             <h1> Settings </h1>
             <div>
-                Smoker: <span><Radio toggle checked={settings.smoker} onChange={onChange} name="smoker"/></span>
+                Smoker: <span><Radio toggle checked={settings.smoker} onChange={onChange} name="smoker" /></span>
             </div>
         </div>  
     )

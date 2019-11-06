@@ -96,28 +96,13 @@ class App extends Component {
           randomUsers: [...ourselves, ...data.results],
         })
       })
-
   }
 
   handleChangeSetting = (e) => {
-      this.setState(
-        (state) => {
-          const newSetting = state.setting.map((setting) => {
-            if(setting.text === clickedSetting.text) {
-              // change is done
-              setting = !setting;
-            }
-            return newSetting;
-          })
-  
-          return {
-            ...state,
-            setting: newSetting
-          }
-        },
-      )
-    }
-  
+    this.setState(state => ({
+      handleChangeSetting: !state.handleChangeSetting
+    }));
+  }
 
   render() {
     return (
