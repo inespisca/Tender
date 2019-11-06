@@ -1,4 +1,16 @@
-.chat-chatForm{
+.chat-spaceForMessages {
+    position: relative;
+    overflow-y: scroll;
+    height: 65vh;
+    width: 70vw;
+    /* overflow-anchor: auto; */
+}
+/* .chat-spaceForMessagesScroll{
+    overflow-anchor: auto;
+    height: 1px;
+} */
+
+.chat-chatForm {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -10,19 +22,18 @@
     justify-content: space-between;
 }
 
-.chat-textInput{
-    width:70%;
+.chat-textInput {
+    width: 70%;
     font-size: 2vh;
-    color:silver;
+    color: silver;
 }
 
-.chat-sendButton{
-    align-items: flex-end;;
+.chat-sendButton {
+    align-items: flex-end;
     border-style: none;
     border-radius: 2px;
-    background-color:#EC9993;
+    background-color: #EC9993;
     padding: 10px;
     font-size: 2.5vh;
-    color:white;
+    color: white;
 }
-
