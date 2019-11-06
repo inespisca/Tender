@@ -34,13 +34,16 @@ class Chat extends Component {
 
   render () {
     return (
-        <Container>
-          <Row >
+      <>
+      <Container className="chat-spaceForMessages">
+      <Row className="chat-spaceForMessagesScroll"
+      >
             <ChatMessages sentMessages={this.state.sentMessages} timeNow={this.state.timeNow}/> 
           </Row>
+      </Container>
+      <Container>
            <Row>
               <form 
-                class="fixed-bottom" 
                 className="chat-chatForm"
               >
                   <input 
@@ -57,7 +60,7 @@ class Chat extends Component {
               </form>
            </Row>
         </Container>
-
+      </>
     );
   }
 }
