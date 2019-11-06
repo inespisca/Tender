@@ -1,29 +1,37 @@
-.chat-spaceForMessages {
-    position: relative;
+.chat {
+    display: flex;
+}
+.chat-contacts {
+    flex: 0 1 300px;
     overflow-y: scroll;
-    height: 65vh;
-    width: 70vw;
+    height: 82vh;
+}
+
+.chat-area {
+    flex-grow: 1;
+}
+
+.chat-spaceForMessages {
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     /* overflow-anchor: auto; */
 }
-/* .chat-spaceForMessagesScroll{
-    overflow-anchor: auto;
-    height: 1px;
-} */
+.chat-spaceForMessagesScroll{
+    overflow-y: scroll;
+}
 
 .chat-chatForm {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 90%;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-bottom: 3.5vh;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
 .chat-textInput {
-    width: 70%;
+    flex-grow: 1;
+    height: 100%;
     font-size: 2vh;
     color: silver;
 }
