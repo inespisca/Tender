@@ -14,7 +14,7 @@ const ourselves = [
       last: 'Santos',
     },
     picture: {
-      thumbnail: 'https://via.placeholder.com/50',
+      thumbnail: 'alex-tn.jpg',
     },
     message: 'Hey handsome! How are you?',
     date: '5 nov.'
@@ -50,7 +50,7 @@ const ourselves = [
     picture: {
       thumbnail: '/angelina-tn.jpg',
     },
-    message: 'Salut! :)',
+    message: 'Voulez-vous coucher avec moi ce soir? ;)',
     date: '31 oct.'
   },
 ]

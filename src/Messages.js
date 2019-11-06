@@ -1,6 +1,5 @@
 
 import './Messages.css';
-import './Home.css';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -28,9 +27,9 @@ class Messages extends Component {
                                                 {user.name.first} {user.name.last}
                                             </Link>
                                         </Col>
-                                        <Col lg={8} md={5} text-justify>
+                                        <Col lg={8} md={5} className="text">
                                             <Link to="/chat" key={user.name} className="text" className="link">
-                                                {user.message ? user.message : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Sed non risus. Suspendisse lectus torto"}
+                                                {user.message ? user.message : "In my local directory a file was created titled .sofia/ and there is a file in there called phoneNum.txt which is corrupted. I use that file to execute a program called date.py. Do you know how to correct that file? "}
                                             </Link>
                                         </Col>
                                         <Col lg={1} md={2} className="date"> {user.date ? user.date : "29 oct."}
