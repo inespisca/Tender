@@ -106,10 +106,10 @@ class App extends Component {
           <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} />} />
           <Route exact path="/settings" component={Settings} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} />} />
-          <Route exact path="/chat" component={Chat} />
+          <Route exact path="/chat" render={() => <Chat randomUsers={this.state.randomUsers} />}  />
         </Switch>
 
-      </BrowserRouter>
+      </BrowserRouter> 
     );
   }
 }
