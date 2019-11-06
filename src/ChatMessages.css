@@ -1,8 +1,13 @@
 .chatMessages-newMessage{
+    margin: 5vw;
     border-radius: 5px;
     background-color: lightgreen;
+    text-align: end;
+    font-size: 1.3vw;
+
 }
 
-.chatMessages-text{
+/* .chatMessages-text{
     text-align: end;
-}
+    font-size: 1.3vw;
+} */
