@@ -1,13 +1,16 @@
-.chatMessages-newMessage{
-    margin: 5vw;
-    border-radius: 5px;
-    background-color: lightgreen;
-    text-align: end;
-    font-size: 1.3vw;
-
+.chatMessages-eachMessage{
+    align-items: flex-end;
 }
 
-/* .chatMessages-text{
-    text-align: end;
-    font-size: 1.3vw;
-} */
+.chatMessages-newMessage{
+    padding: 5px;
+    border-radius: 8px;
+    background-color:silver;
+    text-align: justify;
+    font-size: 1.8vh;
+    overflow-wrap: break-word;
+}
+
+.chatMessages-spaceBetweenMessages{
+    padding: 5px;
+}
