@@ -1,43 +1,53 @@
-import React from 'react';
+
 import './Messages.css';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import React, { Component } from 'react';
 
-
-const Messages = ({ randomUsers }) => {
-    return (
-        <div className="containerMessagess">
-            {
-                randomUsers.map(user => {
-                    return (
-                        <div class="container">
-                            <div key={user.name.first}>
-                                <div class="row">
-                                    <div class="col-md-1" >
-                                        <Link to="/chat">
-                                            <img src={user.picture.thumbnail} alt="Tender user" className="avatar" />
-                                        </Link>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <Link to="/chat" className>
-                                            {user.name.first} {user.name.last}
-                                        </Link>
-                                    </div>
-                                    <div class="col-md-5  text-justify">
-                                        <Link to="/chat" key={user.name} className="text">
-                                            {user.message ? user.message : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Sed non risus. Suspendisse lectus torto"}
-                                        </Link>
-                                    </div>
-                                    <div class="col-md-2" className="date"> {user.date ? user.date : "Today at 6:00PM"} </div>
+class Messages extends Component {
+    render() {
+        const { randomUsers } = this.props
+        return (
+            <div>
+                {
+                    randomUsers.map(user => {
+                        return (
+                            <Container>
+                                <div key={user.name.first}>
+                                    <Row>
+                                        <Col lg={1} md={6} >
+                                            <Link to="/chat" className="link">
+                                                <img src={user.picture.thumbnail} alt="Tender user" className="avatar" />
+                                            </Link>
+                                        </Col>
+                                        <Col lg={2} md={2}>
+                                            <Link to="/chat" className="link">
+                                                {user.name.first} {user.name.last}
+                                            </Link>
+                                        </Col>
+                                        <Col lg={8} md={5} text-justify>
+                                            <Link to="/chat" key={user.name} className="text" className="link">
+                                                {user.message ? user.message : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Sed non risus. Suspendisse lectus torto"}
+                                            </Link>
+                                        </Col>
+                                        <Col lg={1} md={2} className="date"> {user.date ? user.date : "29 oct."}
+                                        </Col>
+                                    </Row>
                                 </div>
-                            </div>
-                        </div>
-                    )
-                })
-            }
-        </div>
-    )
-};
+                            </Container>
+                        )
+                    })
+                }
+            </div>
+        )
+    }
+}
+
+
+
 
 
 
