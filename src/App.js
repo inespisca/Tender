@@ -61,8 +61,13 @@ class App extends Component {
         name: {},
         dob: {},
       },
-      randomUsers: []
+      randomUsers: [],
       // isLoaded: false,
+      settings: {
+        smoker: false,
+        vegetarian: false,
+        single: false,
+      }
     };
   }
 
@@ -94,14 +99,33 @@ class App extends Component {
 
   }
 
+  handleChangeSetting = (e) => {
+      this.setState(
+        (state) => {
+          const newSetting = state.setting.map((setting) => {
+            if(setting.text === clickedSetting.text) {
+              // change is done
+              setting = !setting;
+            }
+            return newSetting;
+          })
+  
+          return {
+            ...state,
+            setting: newSetting
+          }
+        },
+      )
+    }
+  
+
   render() {
-    console.log(this.state.randomUsers)
     return (
       <BrowserRouter>
         <NavBar />
         <Switch>
           <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} />} />
-          <Route exact path="/settings" component={Settings} />
+          <Route exact path="/settings" render={() => <Settings settings={this.state.settings} onChange={this.handleChangeSetting} />} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} />} />
           <Route exact path="/chat" component={Chat} />
         </Switch>
