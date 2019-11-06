@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './Chat.css';
 import ChatMessages from "./ChatMessages"; 
 import {Container, Row, Col} from "react-bootstrap"
+import Messages from "./Messages"
 
 class Chat extends Component {
     constructor(props) {
@@ -36,30 +37,36 @@ class Chat extends Component {
     return (
       <>
       <Container className="chat-spaceForMessages">
-      <Row className="chat-spaceForMessagesScroll"
-      >
-            <ChatMessages sentMessages={this.state.sentMessages} timeNow={this.state.timeNow}/> 
-          </Row>
+
+        {/* insert contact list here */}
+      <Messages/>
+
+
+        <Row className="chat-spaceForMessagesScroll">
+
+          {/* insert answer messages here */}
+
+
+          <ChatMessages sentMessages={this.state.sentMessages} timeNow={this.state.timeNow}/> 
+        </Row>
       </Container>
       <Container>
-           <Row>
-              <form 
-                className="chat-chatForm"
-              >
-                  <input 
-                    type="text" 
-                    className="chat-textInput" 
-                    // placeholder="Go ahead, send them a message. Don't be shy!" 
-                    value={this.state.userMessage} 
-                    onChange={this.showCurrentlyTyping}/>
-                  <input 
-                    type="submit" 
-                    className="chat-sendButton" 
-                    value="Send" 
-                    onClick={this.sendMessageNow}/>
-              </form>
-           </Row>
-        </Container>
+        <Row>
+        <form className="chat-chatForm">
+          <input 
+            type="text" 
+            className="chat-textInput" 
+            // placeholder="Go ahead, send them a message. Don't be shy!" 
+            value={this.state.userMessage} 
+            onChange={this.showCurrentlyTyping}/>
+          <input 
+            type="submit" 
+            className="chat-sendButton" 
+            value="Send" 
+            onClick={this.sendMessageNow}/>
+        </form>
+        </Row>
+      </Container>
       </>
     );
   }
