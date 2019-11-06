@@ -17,7 +17,7 @@ const ourselves = [
       thumbnail: 'https://via.placeholder.com/50',
     },
     message: 'Hey handsome! How are you?',
-    date: 'test'
+    date: '5 nov.'
   },
   {
     name: {
@@ -28,7 +28,7 @@ const ourselves = [
       thumbnail: 'ines-tn.jpg',
     },
     message: "You make my booleans come true!! I would love have a date with you tonight but I am studying Web development at Wild Code School and I have to study hard these next few days to do well in my group's project. Would next week be a good time for our date?",
-    date:'test'
+    date: '4 nov.'
   },
   {
     name: {
@@ -36,10 +36,10 @@ const ourselves = [
       last: 'Ortega',
     },
     picture: {
-      thumbnail: 'https://via.placeholder.com/50',
+      thumbnail: 'elena-tn.jpg',
     },
     message: 'Holà que tal',
-    date :'test'
+    date: '3 nov.'
   },
 
   {
@@ -51,7 +51,7 @@ const ourselves = [
       thumbnail: '/angelina-tn.jpg',
     },
     message: 'Salut! :)',
-    date:'blabla'
+    date: '31 oct.'
   },
 ]
 
