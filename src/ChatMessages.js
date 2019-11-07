@@ -2,6 +2,7 @@ import React from "react"
 import "./ChatMessages.css"
 import { Container, Row, Col } from "react-bootstrap";
 
+
 const ChatMessage = ({sentMessages, timeNow}) => {
 
 return(
