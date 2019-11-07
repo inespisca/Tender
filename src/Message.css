@@ -1,0 +1,20 @@
+.message{
+    display :flex;
+    padding: 5px;
+}
+
+.message div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.message-name{
+    width: 144px;
+    padding: 0 10px;
+}
+
+.message-content{
+    flex-grow: 1;
+}

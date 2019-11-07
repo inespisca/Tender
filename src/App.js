@@ -27,7 +27,7 @@ const ourselves = [
     picture: {
       thumbnail: 'ines-tn.jpg',
     },
-    message: "You make my booleans come true!! I would love have a date with you tonight but I am studying Web development at Wild Code School and I have to study hard these next few days to do well in my group's project. Would next week be a good time for our date?",
+    message: "You make my booleans come true!!",
     date: '4 nov.'
   },
   {
@@ -106,10 +106,10 @@ class App extends Component {
           <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} />} />
           <Route exact path="/settings" component={Settings} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} />} />
-          <Route exact path="/chat" render={() => <Chat randomUsers={this.state.randomUsers} />}  />
+          <Route exact path="/chat" render={() => <Chat randomUsers={this.state.randomUsers} />} />
         </Switch>
 
-      </BrowserRouter> 
+      </BrowserRouter>
     );
   }
 }
