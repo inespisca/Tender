@@ -16,6 +16,7 @@
 }
 .chat-spaceForMessagesScroll{
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .chat-chatForm {
