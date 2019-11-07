@@ -1,20 +1,74 @@
 .message{
-    display :flex;
+    display: flex;
     padding: 5px;
-}
-
-.message div {
+    width: 80%;
+    text-align: left;
+    margin: 0 auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
+    border-bottom-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
 }
 
+
+
 .message-name{
-    width: 144px;
-    padding: 0 10px;
+    display: flex;
+    width: 70px;
+    padding: 0 5px;
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
+    flex-wrap : nowrap;
+    padding: 0 50px;
+    color:grey;
+    font-weight: unset;
 }
 
 .message-content{
     flex-grow: 1;
+    padding-bottom: 5px;
+    font-size: 13px;
 }
+
+.link{
+    color : black;
+}
+
+.message-content:hover{
+    color: #EC9993;
+}
+
+.message-date{
+    font-size:0.7em;
+    color:#999999;
+}
+.avatar{
+    border-radius: 50px;
+}
+
+
+@media screen and (max-width: 800px ) {
+    .message{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .message-name{
+        font-size: 10px;
+    }
+
+    .message-content{
+       font-size: 10px;
+    }
+    .message-date{
+        font-size:0.5em;
+    }
+
+    .meaage-name div{
+        display: flex;
+    }
+}
+

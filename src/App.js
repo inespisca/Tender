@@ -101,7 +101,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <NavBar />
+        <NavBar/>
         <Switch>
           <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} />} />
           <Route exact path="/settings" component={Settings} />
