@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './Chat.css';
-import ChatMessages from "./ChatMessages";
-import { Row } from "react-bootstrap";
 import Messages from "./Messages";
+import ChatMessagesDisplay from "./ChatMessagesDisplay"
 
 class Chat extends Component {
   constructor(props) {
@@ -36,16 +35,22 @@ class Chat extends Component {
   render() {
     return (
       <div className="chat">
+
         <div className="chat-contacts">
           <Messages randomUsers={this.props.randomUsers} />
         </div>
 
-        <div className="chat-area">
-          <div className="chat-spaceForMessages">
+        <div className="chat-spaceForMessages">
             <div className="chat-spaceForMessagesScroll">
+<<<<<<< HEAD
               <ChatMessages sentMessages={this.state.sentMessages} timeNow={this.state.timeNow} />
+=======
+              <ChatMessagesDisplay sentMessages={this.state.sentMessages} timeNow={this.state.timeNow} />
+>>>>>>> master
             </div>
+
             <form className="chat-chatForm">
+<<<<<<< HEAD
               <input
                 type="text"
                 className="chat-textInput"
@@ -57,9 +62,20 @@ class Chat extends Component {
                 className="chat-sendButton"
                 value="Send"
                 onClick={this.sendMessageNow} />
+=======
+              <input 
+                type="text" 
+                className="chat-textInput" 
+                value={this.state.userMessage} 
+                onChange={this.showCurrentlyTyping}/>
+              <input 
+                type="submit" 
+                className="chat-sendButton" 
+                value="Send" 
+                onClick={this.sendMessageNow}/>
+>>>>>>> master
             </form>
           </div>
-        </div>
       </div>
     );
   }

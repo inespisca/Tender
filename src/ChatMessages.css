@@ -1,11 +1,8 @@
-/* .chatMessages-eachMessage{
-
-} */
-
 .chatMessages-newMessage{
+    font-family: 'Montserrat', sans-serif;
     padding: 5px;
     border-radius: 8px;
-    background-color:silver;
+    background-color: #DCDCDC; 
     text-align: justify;
     font-size: 1.8vh;
     overflow-wrap: break-word;

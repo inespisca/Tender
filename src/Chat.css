@@ -7,16 +7,12 @@
     height: 82vh;
 }
 
-.chat-area {
-    flex-grow: 1;
-}
-
 .chat-spaceForMessages {
+    flex-grow: 1;
     height: 82vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    /* overflow-anchor: auto; */
 }
 .chat-spaceForMessagesScroll{
     overflow-y: scroll;
@@ -27,6 +23,7 @@
     align-items: center;
     flex-wrap: nowrap;
     width: 100%;
+    padding: 5px;
 }
 
 .chat-textInput {
@@ -44,4 +41,5 @@
     padding: 10px;
     font-size: 2.5vh;
     color: white;
+    margin-left: 3px;
 }
