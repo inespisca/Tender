@@ -67,6 +67,7 @@ class App extends Component {
         smoker: false,
         vegetarian: false,
         single: false,
+        // Settings' default boolean values
       }
     };
   }
@@ -98,11 +99,9 @@ class App extends Component {
       })
   }
 
-  handleChangeSetting = (e) => {
-    this.setState(state => ({
-      handleChangeSetting: !state.handleChangeSetting
-    }));
-  }
+// setting events (changing the button from right to left and vice-versa)
+handleChangeSetting = e => this.setState({handleChangeSetting: e.target.value});
+}
 
   render() {
     return (
@@ -114,7 +113,6 @@ class App extends Component {
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} />} />
           <Route exact path="/chat" component={Chat} />
         </Switch>
-
       </BrowserRouter>
     );
   }
