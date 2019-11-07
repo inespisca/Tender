@@ -58,7 +58,21 @@ class Chat extends Component {
               onClick={this.sendMessageNow} />
           </form>
         </div>
+
+        <form className="chat-chatForm">
+          <input
+            type="text"
+            className="chat-textInput"
+            value={this.state.userMessage}
+            onChange={this.showCurrentlyTyping} />
+          <input
+            type="submit"
+            className="chat-sendButton"
+            value="Send"
+            onClick={this.sendMessageNow} />
+        </form>
       </div>
+      </div >
     );
   }
 }
