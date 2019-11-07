@@ -1,5 +1,4 @@
 
-import './Messages.css';
 import Message from './Message';
 import React, { Component } from 'react';
 
