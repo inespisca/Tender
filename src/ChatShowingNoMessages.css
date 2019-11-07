@@ -3,16 +3,13 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 2vh;
 }
 
 h1 {
-    /* display: flex; */
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     text-align: center;
     color: #EC9993; 
-    /* align-items: center; */
     
 }
 .tenderLogo{
