@@ -7,10 +7,6 @@
     height: 82vh;
 }
 
-/* .chat-area {
-    flex-grow: 1;
-} */
-
 .chat-spaceForMessages {
     flex-grow: 1;
     height: 82vh;
