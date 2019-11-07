@@ -37,7 +37,7 @@ class Chat extends Component {
       <div className="chat">
 
         <div className="chat-contacts">
-          <Messages randomUsers={this.props.randomUsers}/>
+          <Messages className="Angelina" randomUsers={this.props.randomUsers}/>
         </div>
 
         <div className="chat-spaceForMessages">

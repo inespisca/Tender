@@ -1,11 +1,6 @@
 .chat {
     display: flex;
 }
-.chat-contacts {
-    flex: 0 1 300px;
-    overflow-y: scroll;
-    height: 82vh;
-}
 
 .chat-spaceForMessages {
     flex-grow: 1;
@@ -43,4 +38,16 @@
     font-size: 2.5vh;
     color: white;
     margin-left: 3px;
+}
+
+.chat-contacts {
+    flex: 0 1 300px;
+    overflow-y: scroll;
+    height: 82vh;
+}
+
+@media screen and (max-width: 900px) {
+.chat-contacts{
+    display: none;
+}
 }
