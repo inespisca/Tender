@@ -42,27 +42,10 @@ class Chat extends Component {
 
         <div className="chat-spaceForMessages">
             <div className="chat-spaceForMessagesScroll">
-<<<<<<< HEAD
-              <ChatMessages sentMessages={this.state.sentMessages} timeNow={this.state.timeNow} />
-=======
               <ChatMessagesDisplay sentMessages={this.state.sentMessages} timeNow={this.state.timeNow} />
->>>>>>> master
             </div>
 
             <form className="chat-chatForm">
-<<<<<<< HEAD
-              <input
-                type="text"
-                className="chat-textInput"
-                // placeholder="Go ahead, send them a message. Don't be shy!" 
-                value={this.state.userMessage}
-                onChange={this.showCurrentlyTyping} />
-              <input
-                type="submit"
-                className="chat-sendButton"
-                value="Send"
-                onClick={this.sendMessageNow} />
-=======
               <input 
                 type="text" 
                 className="chat-textInput" 
@@ -73,7 +56,6 @@ class Chat extends Component {
                 className="chat-sendButton" 
                 value="Send" 
                 onClick={this.sendMessageNow}/>
->>>>>>> master
             </form>
           </div>
       </div>
