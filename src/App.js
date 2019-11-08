@@ -67,7 +67,12 @@ class App extends Component {
         smoker: false,
         vegetarian: false,
         single: false,
-        // Settings' default boolean values
+        // Settings' default boolean values. This part is connected directly to the Settings component (more info in the Settings.js file). The other parts
+        // related to settings are only connected after passing by Setting.js. So, long story short, it goes the following way:
+        // App.js (this.state) [default in page] -> Settings.js [where the functionality to change first the radio toggle appears] -> App (router) [it connects
+        // the functionalities present in Settings.js back to App.js and where it takes these settings to their final function: where we'll make user
+        // interaction possible, thanks to the use of handleChangeSetting] -> App.js (handleChangeSetting) [the final stage of the settings, where we make
+        // the radio toggle switch whenever the user clicks in it]
       }
     };
   }
@@ -101,20 +106,31 @@ class App extends Component {
     )
   }
 
-  // setting events (changing the button from right to left and vice-versa)
-  handleChangeSetting = e => this.setState({handleChangeSetting: e.target.value})
+  // thanks to this part below, the user clicks in the settings toggle and the toggle turns true or false depending on the times they click.
+  //The handleChangeSetting below is connected to the Settings component thanks to the line {this.handleChangeSetting in the Router in the App}
+  handleChangeSetting = (settingName) => {
+    this.setState((state) => {
+      return {
+        ...state,
+        settings: {
+          ...state.settings, 
+          [settingName]: !state.settings[settingName],
+        }
+      }
+    })
   };
 
   render() {
     return (
       <BrowserRouter>
-        <NavBar />
+        <NavBar/>
         <Switch>
           <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} />} />
           <Route exact path="/settings" render={() => <Settings settings={this.state.settings} onChange={this.handleChangeSetting} />} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} />} />
-          <Route exact path="/chat" component={Chat} />
+          <Route exact path="/chat" render={() => <Chat randomUsers={this.state.randomUsers} />} />
         </Switch>
+
       </BrowserRouter>
     );
   }

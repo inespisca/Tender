@@ -2,17 +2,24 @@ import React from 'react';
 import './Settings.css';
 import { Radio } from 'semantic-ui-react';
 
-const Settings = ({ settings, onChange, smoker }) => {
+const Settings = ({ settings, onChange }) => {
     return (
         <div>
             <h1> Settings </h1>
             <div>
-                Smoker: <span><Radio toggleChecked={settings.smoker} onChange={onChange} name={smoker ? 'yes' : 'no' }
-                    /></span>
+                Smoker: <span><Radio toggle checked={settings.smoker} onChange={() => onChange('smoker')}/></span>
+            </div>
+            <div>
+                Vegetarian: <span><Radio toggle checked={settings.vegetarian} onChange={() => onChange('vegetarian')}/></span>
+            </div>
+            <div>
+                Single: <span><Radio toggle checked={settings.single} onChange={() => onChange('single')}/></span>
             </div>
         </div> 
     )
 }
-//all radio toggle settings must be done right next each other in order to work
+//These settings are connected to the state in the App through the string at the end of each one. Ex: Smoker is connected to "smoker: false," in the App
+//thanks to the 'smoker' in "onChange('smoker')}". This means that if you switch the string text to 'Smoker' (with capital "S"), the radio toggle will
+//stop working.
 
 export default Settings; 
