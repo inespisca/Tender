@@ -4,7 +4,7 @@ import Description from './Description';
 
 const Home = ({ randomUser, newUser, chuckNorrisQuote }) => {
     return (
-        <div>
+        <>
             <div className="container">
                 {
                     randomUser.name !== undefined &&
@@ -21,7 +21,7 @@ const Home = ({ randomUser, newUser, chuckNorrisQuote }) => {
                 }
             </div>
             <Description chuckNorrisQuote={chuckNorrisQuote}/>
-        </div>
+        </>
     )
 }
 
