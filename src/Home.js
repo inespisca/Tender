@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import Description from './Description';
 
-const Home = ({ randomUser, newUser }) => {
+const Home = ({ randomUser, newUser, chuckNorrisQuote }) => {
     return (
         <>
             <div className="container">
@@ -20,7 +20,7 @@ const Home = ({ randomUser, newUser }) => {
 
                 }
             </div>
-            <Description />
+            <Description chuckNorrisQuote={chuckNorrisQuote}/>
         </>
     )
 }
