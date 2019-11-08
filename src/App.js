@@ -14,9 +14,10 @@ const ourselves = [
       last: 'Santos',
     },
     picture: {
-      thumbnail: 'https://via.placeholder.com/50',
+      thumbnail: 'alex-tn.jpg',
     },
     message: 'Hey handsome! How are you?',
+    date: '5 nov.'
   },
   {
     name: {
@@ -26,7 +27,8 @@ const ourselves = [
     picture: {
       thumbnail: 'ines-tn.jpg',
     },
-    message: "You make my booleans come true!! I would love have a date with you tonight but I am studying Web development at Wild Code School and I have to study hard these next few days to do well in my group's project. Would next week be a good time for our date?",
+    message: "You make my booleans come true!!",
+    date: '4 nov.'
   },
   {
     name: {
@@ -34,9 +36,10 @@ const ourselves = [
       last: 'Ortega',
     },
     picture: {
-      thumbnail: 'https://via.placeholder.com/50',
+      thumbnail: 'elena-tn.jpg',
     },
     message: 'Holà que tal',
+    date: '3 nov.'
   },
 
   {
@@ -47,7 +50,8 @@ const ourselves = [
     picture: {
       thumbnail: '/angelina-tn.jpg',
     },
-    message: 'Salut! :)',
+    message: 'Voulez-vous coucher avec moi ce soir? ;)',
+    date: '31 oct.'
   },
 ]
 
@@ -73,7 +77,8 @@ class App extends Component {
         // the functionalities present in Settings.js back to App.js and where it takes these settings to their final function: where we'll make user
         // interaction possible, thanks to the use of handleChangeSetting] -> App.js (handleChangeSetting) [the final stage of the settings, where we make
         // the radio toggle switch whenever the user clicks in it]
-      }
+      },
+      chuckNorrisQuote: 'hello',
     };
   }
 
@@ -83,6 +88,16 @@ class App extends Component {
   }
 
   getUser = () => {
+    //get quote at the same time as a new user
+    fetch("https://api.chucknorris.io/jokes/random")
+    .then(response => response.json())
+    .then( data => {
+        this.setState({
+            chuckNorrisQuote: data.value,
+
+           })
+       })
+
     fetch("https://randomuser.me/api/?inc=gender,name,dob,picture")
       .then(response => response.json())
       .then(data => {
@@ -121,11 +136,11 @@ class App extends Component {
   };
 
   render() {
-    return (
+        return (
       <BrowserRouter>
         <NavBar/>
         <Switch>
-          <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} />} />
+        <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} chuckNorrisQuote={this.state.chuckNorrisQuote}/>} />
           <Route exact path="/settings" render={() => <Settings settings={this.state.settings} onChange={this.handleChangeSetting} />} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} />} />
           <Route exact path="/chat" render={() => <Chat randomUsers={this.state.randomUsers} />} />
