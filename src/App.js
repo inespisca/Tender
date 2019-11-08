@@ -14,7 +14,7 @@ const ourselves = [
       last: 'Santos',
     },
     picture: {
-      thumbnail: 'alex-tn.jpg',
+      thumbnail: 'https://i.imgur.com/EkLnHof.jpg',
     },
     message: 'Hey handsome! How are you?',
     date: '5 nov.'
@@ -25,7 +25,7 @@ const ourselves = [
       last: 'Oliveira',
     },
     picture: {
-      thumbnail: 'ines-tn.jpg',
+      thumbnail: 'https://i.imgur.com/v7zP5R8.jpg',
     },
     message: "You make my booleans come true!!",
     date: '4 nov.'
@@ -36,7 +36,7 @@ const ourselves = [
       last: 'Ortega',
     },
     picture: {
-      thumbnail: 'elena-tn.jpg',
+      thumbnail: 'https://i.imgur.com/p9fIRKM.jpg',
     },
     message: 'Holà que tal',
     date: '3 nov.'
@@ -48,7 +48,7 @@ const ourselves = [
       last: 'Riet',
     },
     picture: {
-      thumbnail: '/angelina-tn.jpg',
+      thumbnail: 'https://i.imgur.com/t4iBPv7.jpg',
     },
     message: 'Voulez-vous coucher avec moi ce soir? ;)',
     date: '31 oct.'
