@@ -1,4 +1,7 @@
-.menu{
-    display: flex;
-    flex-direction: row;
+.navBarCustom{
+    position : absolute;
+    width : 100%;
+    z-index: 10;
+    text-align: right;
+    background-color: white;
 }
