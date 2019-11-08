@@ -10,7 +10,7 @@ const Settings = ({ settings, onChange, smoker }) => {
                 Smoker: <span><Radio toggleChecked={settings.smoker} onChange={onChange} name={smoker ? 'yes' : 'no' }
                     /></span>
             </div>
-        </div>  
+        </div> 
     )
 }
 //all radio toggle settings must be done right next each other in order to work

@@ -85,7 +85,8 @@ class App extends Component {
           // isLoaded : true,
           randomUser: data.results[0],
         })
-      })
+      }
+    )
   }
 
   getUsers = () => {
@@ -96,12 +97,13 @@ class App extends Component {
           // isLoaded : true,
           randomUsers: [...ourselves, ...data.results],
         })
-      })
+      }
+    )
   }
 
-// setting events (changing the button from right to left and vice-versa)
-handleChangeSetting = e => this.setState({handleChangeSetting: e.target.value});
-}
+  // setting events (changing the button from right to left and vice-versa)
+  handleChangeSetting = e => this.setState({handleChangeSetting: e.target.value})
+  };
 
   render() {
     return (
