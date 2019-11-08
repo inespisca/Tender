@@ -1,0 +1,35 @@
+/* General Sytles*/
+
+/*------Container------*/
+
+.container {  width: 80%; margin: 0 auto; text-align: center; position:relative;}
+
+.wrapper {
+    width: 65%;
+}
+.mainImage {
+    width:55%;
+    border: 5px solid black;
+}
+
+
+
+button{
+    background-color: #EC9993;
+    width:200px;
+    color:white;
+    font-weight:bold;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+}
+
+.moreInfo {  display: block;  margin: 2% auto;  text-align: center; }
+.moreInfo h4{ text-align: center; display:block; background-color: #EC9993; color:white; padding:5%;}
+.none{ display:none; transition: all 0.8s ease;}
+
+.swipe-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
