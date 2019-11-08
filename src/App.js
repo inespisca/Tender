@@ -65,8 +65,10 @@ class App extends Component {
         name: {},
         dob: {},
       },
-      randomUsers: []
+      randomUsers: [],
       // isLoaded: false,
+      chuckNorrisQuote: 'hello'
+
     };
   }
 
@@ -76,6 +78,16 @@ class App extends Component {
   }
 
   getUser = () => {
+    //get quote at the same time as a new user
+    fetch("https://api.chucknorris.io/jokes/random")
+    .then(response => response.json())
+    .then( data => {
+        this.setState({
+            chuckNorrisQuote: data.value,
+
+           })
+       })
+
     fetch("https://randomuser.me/api/?inc=gender,name,dob,picture")
       .then(response => response.json())
       .then(data => {
@@ -99,11 +111,12 @@ class App extends Component {
   }
 
   render() {
+    console.log('we are in App.js: ' + this.state.chuckNorrisQuote)
     return (
       <BrowserRouter>
         <NavBar />
         <Switch>
-          <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} />} />
+          <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} chuckNorrisQuote={this.state.chuckNorrisQuote}/>} />
           <Route exact path="/settings" component={Settings} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} />} />
           <Route exact path="/chat" component={Chat} />
