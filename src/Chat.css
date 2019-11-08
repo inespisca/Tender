@@ -46,7 +46,7 @@
     height: 82vh;
 }
 
-@media screen and (max-width: 800px ) {
+@media screen and (max-width: 900px ) {
     .chat-contacts {
     display: none;  
     }
