@@ -1,0 +1,28 @@
+.noMatch h1{
+    display: block;
+    color: #000000;
+}
+.noMatch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.yesMatch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.yesMatch h1{
+    display: block;
+    color: #000000;
+}
+
+.matchText-newUser{
+    background-color: blue;
+    margin: 50px;
+    display: block;
+}
