@@ -6,7 +6,7 @@ class Description extends Component{
          super(props);
 
          this.state = {
-             showDescription: false,
+            //  showDescription: false,
          }
 
         //  this.handleShowDescriptionOnClick = this.handleShowDescriptionOnClick.bind(
@@ -15,17 +15,17 @@ class Description extends Component{
 
      }
 
-     componentDidUpdate(prevProps) {
-         if(this.props.chuckNorrisQuote !== prevProps.chuckNorrisQuote){
-             this.setState({showDescription: false});
-         }
+    //  componentDidUpdate(prevProps) {
+    //      if(this.props.chuckNorrisQuote !== prevProps.chuckNorrisQuote){
+    //          this.setState({showDescription: false});
+    //      }
 
-     }
+    //  }
 
-     handleShowDescriptionOnClick = () => {
+    //  handleShowDescriptionOnClick = () => {
 
-            this.setState({ showDescription: !this.state.showDescription });
-     }
+    //         this.setState({ showDescription: !this.state.showDescription });
+    //  }
 
 
 
@@ -33,12 +33,12 @@ class Description extends Component{
     render (){
         return(
          <div className="container">
-                <button onClick={this.handleShowDescriptionOnClick} >
-                 MORE INFO </button>
-                {this.state.showDescription ? 
+                {/* <button onClick={this.handleShowDescriptionOnClick} >
+                 MORE INFO </button> */}
                 <div className="moreInfo">
+                    <h1>More Info</h1>
                         <h4>{this.props.chuckNorrisQuote}</h4>
-                </div>: null}               
+                </div>            
          </div>
         )
     }
