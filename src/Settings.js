@@ -12,11 +12,13 @@ const Settings = ({ settings, onChange }) => {
             <div>
                 Smoker: <span><Radio toggle checked={settings.smoker} onChange={() => onChange('smoker')}/></span>
             </div>
-            <div>
-                Vegetarian: <span><Radio toggle checked={settings.vegetarian} onChange={() => onChange('vegetarian')}/></span>
+            <div className="settings-border"></div>
+            <div className="vegetarian">
+                Would you like a vegetarian to eat vegetarian food with you? <span><Radio toggle checked={settings.vegetarian} onChange={() => onChange('vegetarian')}/></span>
             </div>
-            <div>
-                Single: <span><Radio toggle checked={settings.single} onChange={() => onChange('single')}/></span>
+            <div className="settings-border"></div>
+            <div className="single">
+                Would you like someone single so you don't ruin a marriage? <span><Radio toggle checked={settings.single} onChange={() => onChange('single')}/></span>
             </div>
         </div> 
     )
