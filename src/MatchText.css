@@ -1,28 +1,47 @@
-.noMatch h1{
-    display: block;
-    color: #000000;
+.isMatch{
+    padding-top: 70px;
 }
+
 .noMatch{
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+}
+
+.noMatch h1{
+    font-size: 45px;
+    color: #A8A8A8
+}
+
+
+.yesMatch h1{
+    font-size: 50px;
+    color: #EC9993;
 }
 
 .yesMatch{
     display: flex;
-    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
-.yesMatch h1{
-    display: block;
-    color: #000000;
+.matchText-yesBtns{
+    display: flex;
+    justify-content: center;
 }
 
 .matchText-newUser{
-    background-color: blue;
     margin: 50px;
-    display: block;
+    /* display: block; */
+} 
+
+.matchText-tenderLogo{
+    max-width: 7vw;
+    opacity: 0.2;
+
+}
+
+.matchText-goToChatBtn{
+    margin: 50px;
+    /* display: block; */
 }
