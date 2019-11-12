@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Home.css';
 import Description from './Description';
 import MatchText from './MatchText';
+import { isContainer } from 'postcss-selector-parser';
 
 const Home = ({ randomUser, newUser, chuckNorrisQuote }) => {
 
@@ -19,6 +20,18 @@ const Home = ({ randomUser, newUser, chuckNorrisQuote }) => {
         setIsDecided(true);
     }
 
+    const handleClassName = () => {
+        if(isDecided){
+            if(isMatch){
+                return "mainImage-transparent"
+            } else {
+                return "mainImage-bright"
+            }
+        }else{
+            return "mainImage"
+        } 
+    }
+
     return (
         <>
             <div className="container">
@@ -27,7 +40,7 @@ const Home = ({ randomUser, newUser, chuckNorrisQuote }) => {
                     <div className="swipe-area">
                         <button className = {isDecided && "off-buttons"} onClick={handleNewUser}> NOBODY LOVES YOU</button>
                         <div className="wrapper">
-                            <img className="mainImage" src={randomUser.picture.large} alt="Tender user" />
+                            <img className={handleClassName()} src={randomUser.picture.large} alt="Tender user" />
                             <h1> {randomUser.name.first} {randomUser.name.last} </h1>
                             <h2> {randomUser.dob.age} years old </h2>
                         </div>

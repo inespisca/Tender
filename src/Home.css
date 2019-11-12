@@ -11,7 +11,7 @@
     
 }
 
-.wrapper{
+.wrapper {
     width: 65%;
 }
 .mainImage{
@@ -19,7 +19,15 @@
     border: 5px solid black;
 }
 
+.mainImage-transparent{
+    width:40%;
+    opacity: 0.5;
+}
 
+.mainImage-bright{
+    width:40%;
+    filter: brightness(150%);
+}
 
 button{
     background-color: #EC9993;
