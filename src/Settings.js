@@ -5,7 +5,7 @@ import { Radio } from 'semantic-ui-react';
 
 const Settings = ({ settings, onChange }) => {
     return (
-        <div>
+        <div className="settings-container">
             <h1> Settings </h1>
             <Preferences settings={settings} onChange={onChange}/>
 

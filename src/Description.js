@@ -31,7 +31,6 @@ class Description extends Component{
 
 
     render (){
-        
         return(
          <div className="container">
                 <button onClick={this.handleShowDescriptionOnClick} >
