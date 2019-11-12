@@ -4,15 +4,15 @@ import { Radio } from 'semantic-ui-react';
 
 const Settings = ({ settings, onChange }) => {
     return (
-        <div>
+        <div className="settings">
             <h1> Settings </h1>
-            <div>
+            <div className="smoker">
                 Smoker: <span><Radio toggle checked={settings.smoker} onChange={() => onChange('smoker')}/></span>
             </div>
-            <div>
+            <div className="vegetarian">
                 Vegetarian: <span><Radio toggle checked={settings.vegetarian} onChange={() => onChange('vegetarian')}/></span>
             </div>
-            <div>
+            <div className="single">
                 Single: <span><Radio toggle checked={settings.single} onChange={() => onChange('single')}/></span>
             </div>
         </div> 
