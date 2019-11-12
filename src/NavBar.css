@@ -1,20 +1,26 @@
 .navBarCustom{
     position : absolute;
-    width : 100%;
+    width : 99%;
     z-index: 10;
-    text-align: right;
-    background-color: white;
-    padding-right: 20px;
+    text-align: center;
+    background-color: white; 
+}
+
+.navbar-icon{
+        width: 50px;
+        height:50px;
 }
 
 .logo-tender{
     color: #EC9993; 
-    font-weight:bold;
-    font-size: 3em;
+    opacity:0.9;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 .link-menu{
    font-size: 1.2em;
    color:#EC9993 ;
 }
+
 
