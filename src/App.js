@@ -94,37 +94,37 @@ class App extends Component {
   }
 
   getGenderSelection = () => {
-    if(this.state.settings.female === true && this.state.settings.male === false){
+    if (this.state.settings.female === true && this.state.settings.male === false) {
       return '&gender=female'
-    } else if (this.state.settings.female === false && this.state.settings.male === true){
+    } else if (this.state.settings.female === false && this.state.settings.male === true) {
       return '&gender=male'
     } else {
       return ''
     }
   }
 
-  
+
   getUser = () => {
     //get quote at the same time as a new user
     fetch("https://api.chucknorris.io/jokes/random")
-    .then(response => response.json())
-    .then( data => {
-      this.setState({
-        chuckNorrisQuote: data.value,
-        
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          chuckNorrisQuote: data.value,
+
+        })
       })
-    })
-    
-    const url= `https://randomuser.me/api/?inc=gender,name,dob,picture${this.getGenderSelection()}`;
+
+    const url = `https://randomuser.me/api/?inc=gender,name,dob,picture${this.getGenderSelection()}`;
     fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      this.setState({
-        // isLoaded : true,
-        randomUser: data.results[0],
-      })
-    }
-  )
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          // isLoaded : true,
+          randomUser: data.results[0],
+        })
+      }
+      )
 
   }
 
@@ -141,7 +141,7 @@ class App extends Component {
           randomUsers: [...ourselves, ...data.results],
         })
       }
-    )
+      )
   }
 
   // thanks to this part below, the user clicks in the settings toggle and the toggle turns true or false depending on the times they click.
@@ -151,7 +151,7 @@ class App extends Component {
       return {
         ...state,
         settings: {
-          ...state.settings, 
+          ...state.settings,
           [settingName]: !state.settings[settingName],
         }
       }
@@ -160,11 +160,11 @@ class App extends Component {
 
   render() {
 
-        return (
+    return (
       <BrowserRouter>
-        <NavBar/>
+        <NavBar />
         <Switch>
-        <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} chuckNorrisQuote={this.state.chuckNorrisQuote}/>} />
+          <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} chuckNorrisQuote={this.state.chuckNorrisQuote} />} />
           <Route exact path="/settings" render={() => <Settings settings={this.state.settings} onChange={this.handleChangeSetting} />} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} />} />
           <Route exact path="/chat" render={() => <Chat randomUsers={this.state.randomUsers} />} />
