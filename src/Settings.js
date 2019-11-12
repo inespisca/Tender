@@ -1,11 +1,14 @@
 import React from 'react'; 
 import './Settings.css';
+import Preferences from './Preferences'
 import { Radio } from 'semantic-ui-react';
 
 const Settings = ({ settings, onChange }) => {
     return (
         <div>
             <h1> Settings </h1>
+            <Preferences settings={settings} onChange={onChange}/>
+
             <div>
                 Smoker: <span><Radio toggle checked={settings.smoker} onChange={() => onChange('smoker')}/></span>
             </div>

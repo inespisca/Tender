@@ -7,6 +7,7 @@ import Messages from './Messages';
 import NavBar from './NavBar';
 import Chat from './Chat';
 
+
 const ourselves = [
   {
     name: {
@@ -77,6 +78,11 @@ class App extends Component {
         // the functionalities present in Settings.js back to App.js and where it takes these settings to their final function: where we'll make user
         // interaction possible, thanks to the use of handleChangeSetting] -> App.js (handleChangeSetting) [the final stage of the settings, where we make
         // the radio toggle switch whenever the user clicks in it]
+
+        // this is for the female and male preference on settings
+        female: true,
+        male: true
+
       },
       chuckNorrisQuote: '',
     };
@@ -87,27 +93,44 @@ class App extends Component {
     this.getUsers();
   }
 
+  getGenderSelection = () => {
+    if(this.state.settings.female === true && this.state.settings.male === false){
+      return '&gender=female'
+    } else if (this.state.settings.female === false && this.state.settings.male === true){
+      return '&gender=male'
+    } else {
+      return ''
+    }
+  }
+
+  
   getUser = () => {
     //get quote at the same time as a new user
     fetch("https://api.chucknorris.io/jokes/random")
     .then(response => response.json())
     .then( data => {
-        this.setState({
-            chuckNorrisQuote: data.value,
+      this.setState({
+        chuckNorrisQuote: data.value,
+        
+      })
+    })
+    
+    const url= `https://randomuser.me/api/?inc=gender,name,dob,picture${this.getGenderSelection()}`;
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      this.setState({
+        // isLoaded : true,
+        randomUser: data.results[0],
+      })
+    }
+  )
 
-           })
-       })
-
-    fetch("https://randomuser.me/api/?inc=gender,name,dob,picture")
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          // isLoaded : true,
-          randomUser: data.results[0],
-        })
-      }
-    )
   }
+
+
+
+
 
   getUsers = () => {
     fetch("https://randomuser.me/api/?results=10")
@@ -136,6 +159,7 @@ class App extends Component {
   };
 
   render() {
+
         return (
       <BrowserRouter>
         <NavBar/>
