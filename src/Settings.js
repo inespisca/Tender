@@ -8,7 +8,7 @@ const Settings = ({ settings, onChange }) => {
             <h1> Settings </h1>
             <div className="settings-border"></div>
             <div className="smoker">
-                Would you like to find hot smokers?<span><Radio toggle checked={settings.smoker} onChange={() => onChange('smoker')}/></span>
+                Would you like to find some hot smokers?<span><Radio toggle checked={settings.smoker} onChange={() => onChange('smoker')}/></span>
             </div>
             <div className="settings-border"></div>
             <div className="vegetarian">
