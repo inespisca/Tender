@@ -78,7 +78,7 @@ class App extends Component {
         // interaction possible, thanks to the use of handleChangeSetting] -> App.js (handleChangeSetting) [the final stage of the settings, where we make
         // the radio toggle switch whenever the user clicks in it]
       },
-      chuckNorrisQuote: 'hello',
+      chuckNorrisQuote: '',
     };
   }
 
