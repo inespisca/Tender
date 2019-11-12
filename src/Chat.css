@@ -26,7 +26,7 @@
     flex-grow: 1;
     height: 100%;
     font-size: 2vh;
-    color: silver;
+    color: #808080	;
 }
 
 .chat-sendButton {
