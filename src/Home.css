@@ -53,3 +53,7 @@ button{
     justify-content: center;
     align-items: center;
 }
+
+.off-buttons{
+    display: none;
+}
