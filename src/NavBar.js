@@ -26,7 +26,7 @@ class NavBar extends Component {
                 <MDBNavLink exact to="/">Home</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink exact to="/settings">settings</MDBNavLink>
+                <MDBNavLink exact to="/settings">Settings</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
                 <MDBNavLink exact to="/messages">Messages</MDBNavLink>
