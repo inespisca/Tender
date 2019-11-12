@@ -46,3 +46,6 @@
 
 .ui.toggle.checkbox input:focus:checked~.box:before, .ui.toggle.checkbox input:focus:checked~label:before {
     background-color: #EC9993!important;}
+.settings-container{
+    padding-top: 20vh;
+}
