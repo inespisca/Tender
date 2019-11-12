@@ -4,7 +4,7 @@
 
 .chat-spaceForMessages {
     flex-grow: 1;
-    height: 82vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -43,7 +43,7 @@
 .chat-contacts {
     flex: 0 1 400px;
     overflow-y: scroll;
-    height: 82vh;
+    height: 100vh;
 }
 
 @media screen and (max-width: 900px ) {

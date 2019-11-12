@@ -3,12 +3,3 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.App-mainContent {
-    padding-top: 56px;
-    min-height: 100vh;
-    padding-top: 56px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} 
