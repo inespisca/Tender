@@ -1,3 +1,48 @@
 .settings {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
+
+.settings-border {
+    display: flex;
+    padding: 5px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    border-bottom-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+}
+
+.smoker {
+    display: flex;
+    padding: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
+.vegetarian {
+    display: flex;
+    padding: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
+.single {
+    display: flex;
+    padding: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
+.ui.toggle.checkbox input:checked ~ .box::before, .ui.toggle.checkbox input:checked ~ label::before {
+    background-color: #EC9993!important;}
+
+.ui.toggle.checkbox input:focus:checked~.box:before, .ui.toggle.checkbox input:focus:checked~label:before {
+    background-color: #EC9993!important;}

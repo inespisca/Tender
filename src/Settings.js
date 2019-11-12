@@ -6,14 +6,17 @@ const Settings = ({ settings, onChange }) => {
     return (
         <div className="settings">
             <h1> Settings </h1>
+            <div className="settings-border"></div>
             <div className="smoker">
-                Smoker: <span><Radio toggle checked={settings.smoker} onChange={() => onChange('smoker')}/></span>
+                Would you like to find hot smokers?<span><Radio toggle checked={settings.smoker} onChange={() => onChange('smoker')}/></span>
             </div>
+            <div className="settings-border"></div>
             <div className="vegetarian">
-                Vegetarian: <span><Radio toggle checked={settings.vegetarian} onChange={() => onChange('vegetarian')}/></span>
+                Would you like a vegetarian to eat vegetarian food with you? <span><Radio toggle checked={settings.vegetarian} onChange={() => onChange('vegetarian')}/></span>
             </div>
+            <div className="settings-border"></div>
             <div className="single">
-                Single: <span><Radio toggle checked={settings.single} onChange={() => onChange('single')}/></span>
+                Would you like someone single so you don't ruin a marriage? <span><Radio toggle checked={settings.single} onChange={() => onChange('single')}/></span>
             </div>
         </div> 
     )
