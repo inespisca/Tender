@@ -8,17 +8,14 @@ const Settings = ({ settings, onChange }) => {
         <div className="settings-container">
             <h1> Settings </h1>
             <Preferences settings={settings} onChange={onChange}/>
-
-            <div>
+            <div className="setting">
                 Smoker: <span><Radio toggle checked={settings.smoker} onChange={() => onChange('smoker')}/></span>
             </div>
-            <div className="settings-border"></div>
-            <div className="vegetarian">
-                Would you like a vegetarian to eat vegetarian food with you? <span><Radio toggle checked={settings.vegetarian} onChange={() => onChange('vegetarian')}/></span>
+            <div className="setting">
+                Vegetarian: <span><Radio toggle checked={settings.vegetarian} onChange={() => onChange('vegetarian')}/></span>
             </div>
-            <div className="settings-border"></div>
-            <div className="single">
-                Would you like someone single so you don't ruin a marriage? <span><Radio toggle checked={settings.single} onChange={() => onChange('single')}/></span>
+            <div className="last-setting">
+                Single: <span><Radio toggle checked={settings.single} onChange={() => onChange('single')}/></span>
             </div>
         </div> 
     )
