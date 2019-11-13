@@ -8,7 +8,7 @@ const ChatMessage = ({sentMessages, timeNow}) => {
 return(
 //still need to add time 
     <Container>
-        <Row>
+        <Row className={"sentMessagesRow"}>
         <Col  md={{ span: 4, offset: 8 }} sm={{ span: 5, offset: 7 }} xs={{ span: 8, offset: 4 }} >
                 {sentMessages.map ( message => (
                     <div className="chatMessages-eachMessage">

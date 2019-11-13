@@ -24,7 +24,7 @@ class Chat extends Component {
       this.setState((state) => {
         return {
           ...state,
-          sentMessages: [...state.sentMessages, state.userMessage],
+          sentMessages: [...state.sentMessages, [state.userMessage,  ]],
           timeNow: new Date(),
           userMessage: "",
         }

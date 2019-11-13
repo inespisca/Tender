@@ -1,13 +1,19 @@
 .chatMessages-newMessage{
     font-family: 'Montserrat', sans-serif;
-    padding: 5px;
+    padding: 15px;
     border-radius: 8px;
     background-color: #DCDCDC; 
     text-align: justify;
     font-size: 1.8vh;
     overflow-wrap: break-word;
+    color: 	#303030;
 }
 
 .chatMessages-spaceBetweenMessages{
-    padding: 5px;
+    padding: 10px;
+}
+
+.sentMessagesRow{
+    margin-bottom: 10px;
+    overflow:auto
 }
