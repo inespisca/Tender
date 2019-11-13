@@ -129,9 +129,6 @@ class App extends Component {
   }
 
 
-
-
-
   getUsers = () => {
     fetch("https://randomuser.me/api/?results=10")
       .then(response => response.json())

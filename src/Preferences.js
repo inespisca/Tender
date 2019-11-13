@@ -1,7 +1,7 @@
 import React from 'react'; 
-import './Preferences.css';
-import './Settings.css';
 import { Radio } from 'semantic-ui-react';
+import './Settings.css';
+import './Preferences.css';
 
 const Preferences = ({settings, onChange}) => (
         <>
