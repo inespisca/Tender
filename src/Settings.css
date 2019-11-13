@@ -1,48 +1,70 @@
-.settings {
+.settings-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    justify-content: center;
     align-items: center;
+    padding-top: 25vh;
 }
 
-.settings-border {
+/* settings-container: "settings-container" is the entire Settings area. It was named "settings" at first but, to avoid confusion with "setting", I changed the name to
+"settings-container", which was the name Angelina gave to it. Also Angelina's 20vh in the padding-top was copy-pasted into here to be together with
+the whole code and I increased it to 25vh because of the navbar. Please, lemme know if it doesn't look so good in your computers! */
+
+.setting {
     display: flex;
-    padding: 5px;
-    width: 80%;
-    display: flex;
+    padding: 10px;
+    justify-content: space-evenly;
     align-items: center;
+    width: 50%;
     border-bottom-style: solid;
     border-color: #cccccc;
     border-width: 1px;
+    font-size: 18px;
 }
 
-.smoker {
+/* setting: I've cleaned up the CSS I was doing for this page, there was a section for smoker, another for vegetarian and so on but I decided to make the code cleaner
+by putting all the settings with the same name - "setting". This section includes now the border below each line as well, so I don't need to be making
+anymore of those:
+<div className="border"></div>
+<div className="smoker"></div>
+<div className="border"></div>
+<div className="vegetarian"></div>
+It looked so ugly as it was, now it's looking much better *thumbs up* */
+
+.first-setting {
     display: flex;
-    padding: 5px;
+    padding: 10px;
     justify-content: space-evenly;
     align-items: center;
     width: 50%;
+    padding-top: 5vh;
+    border-bottom-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+    font-size: 18px;
 }
 
-.vegetarian {
+/* first-setting: This is to be only used in the first setting to appear in the settings page. The difference is just the padding-top, which separates all the settings below
+from the title. It also includes the border because there will be settings after this one */
+
+.last-setting {
     display: flex;
-    padding: 5px;
+    padding: 10px;
     justify-content: space-evenly;
     align-items: center;
     width: 50%;
+    font-size: 18px;
 }
 
-.single {
-    display: flex;
-    padding: 5px;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 50%;
-}
+/* last-setting: This is to be used in the last setting of the page. Basically, it looks exactly like the others, it just doesn't include de border because
+there isn't a need to separate the last option from the nothingness below */
 
 .ui.toggle.checkbox input:checked ~ .box::before, .ui.toggle.checkbox input:checked ~ label::before {
     background-color: #EC9993!important;}
 
 .ui.toggle.checkbox input:focus:checked~.box:before, .ui.toggle.checkbox input:focus:checked~label:before {
     background-color: #EC9993!important;}
+
+/* These two things above aren't here by chance. The radio toggles were set be dark blue when active by default, which didn't match our website's design, so
+(and kudos to Elena for finding this out) we went to inspector to find the name given to the radio toggles so we could change their colour and we did it!
+The first code is for a few seconds after the toggle is pressed, the second code is to change the color during the animation of pressing the toggle, so our
+button can always be pink and stay pink the whole time */
