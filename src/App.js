@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter, Switch, NavLink } from 'react-router-dom';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import Settings from './Settings';
 import Messages from './Messages';
 import NavBar from './NavBar';
 import Chat from './Chat';
+import Profile from './Profile';
+import { withRouter, useHistory } from "react-router-dom";
 
 
 const ourselves = [
@@ -16,9 +18,15 @@ const ourselves = [
     },
     picture: {
       thumbnail: 'https://i.imgur.com/EkLnHof.jpg',
+      large: 'https://i.imgur.com/uJUm1Mi.jpg',
     },
     message: 'Hey handsome! How are you?',
-    date: '5 nov.'
+    date: '5 nov.',
+    contact: {
+      LinkedIn: 'https://www.linkedin.com/in/alexandrapatriciosantos/',
+      GitHub: 'https://github.com/alexandrapatriciosantos',
+    },
+    description: 'blablabla'
   },
   {
     name: {
@@ -27,9 +35,15 @@ const ourselves = [
     },
     picture: {
       thumbnail: 'https://i.imgur.com/v7zP5R8.jpg',
+      large: 'https://i.imgur.com/r1WdS6j.png',
     },
     message: "You make my booleans come true!!",
-    date: '4 nov.'
+    date: '4 nov.',
+    contact: {
+      LinkedIn: 'https://www.linkedin.com/in/inesfpoliveira/',
+      GitHub: 'https://github.com/inespisca',
+    },
+    description: 'blablabla'
   },
   {
     name: {
@@ -38,9 +52,15 @@ const ourselves = [
     },
     picture: {
       thumbnail: 'https://i.imgur.com/p9fIRKM.jpg',
+      large: 'https://i.imgur.com/s2PbYkp.jpg',
     },
     message: 'Holà que tal',
-    date: '3 nov.'
+    date: '3 nov.',
+    contact: {
+      LinkedIn: 'https://www.linkedin.com/in/elenaortegabaura/',
+      GitHub: 'https://github.com/eobwebdevelop',
+    },
+    description: 'blablabla'
   },
 
   {
@@ -50,10 +70,16 @@ const ourselves = [
     },
     picture: {
       thumbnail: 'https://i.imgur.com/t4iBPv7.jpg',
+      large: 'https://i.imgur.com/uGJe7AV.jpg',
     },
     message: 'Voulez-vous coucher avec moi ce soir? ;)',
-    date: '31 oct.'
-  },
+    date: '31 oct.',
+    contact: {
+      LinkedIn: 'https://www.linkedin.com/in/angelinariet/',
+      GitHub: 'https://github.com/AngelinaRIET',
+    },
+    description: 'blablabla'
+  }
 ]
 
 class App extends Component {
@@ -68,6 +94,7 @@ class App extends Component {
       },
       randomUsers: [],
       // isLoaded: false,
+      selectedUser: {},
       settings: {
         smoker: false,
         vegetarian: false,
@@ -155,21 +182,27 @@ class App extends Component {
     })
   };
 
-  render() {
 
+  handleSelectUser = (clickedUser, nextRoute) => {
+    this.setState({ selectedUser: clickedUser }, () => {
+      this.props.history.push(nextRoute);
+    });
+  }
+
+  render() {
     return (
-      <BrowserRouter>
+      <>
         <NavBar />
         <Switch>
           <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} chuckNorrisQuote={this.state.chuckNorrisQuote} />} />
           <Route exact path="/settings" render={() => <Settings settings={this.state.settings} onChange={this.handleChangeSetting} />} />
-          <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} />} />
+          <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} onSelectUser={this.handleSelectUser} />} />
           <Route exact path="/chat" render={() => <Chat randomUsers={this.state.randomUsers} />} />
+          <Route exact path="/profile" render={() => <Profile user={this.state.selectedUser} />} />
         </Switch>
-
-      </BrowserRouter>
+      </>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
