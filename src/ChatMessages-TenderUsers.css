@@ -1,19 +1,19 @@
-.chatMessages-newMessage{
+.chatMessages-TenderUsers-newMessage{
     font-family: 'Montserrat', sans-serif;
     padding: 15px;
     border-radius: 8px;
-    background-color: #DCDCDC; 
+    background-color: #EC9993; 
     text-align: justify;
     font-size: 1.8vh;
     overflow-wrap: break-word;
     color: 	#303030;
 }
 
-.chatMessages-spaceBetweenMessages{
+.chatMessages-TenderUsers-spaceBetweenMessages{
     padding: 10px;
 }
 
-.sentMessagesRow{
+.sentMessagesRow-TenderUsers{
     margin-bottom: 10px;
     overflow:auto
 }
