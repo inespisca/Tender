@@ -6,10 +6,10 @@ import './Preferences.css';
 const Preferences = ({settings, onChange}) => (
         <>
         <div className="first-setting">
-            Female: <span><Radio toggle checked={settings.female} onChange={() => onChange('female')}/></span>
+            <p className="settingsItem">Female:</p> <span><Radio toggle checked={settings.female} onChange={() => onChange('female')}/></span>
         </div>
         <div className="setting">
-            Male: <span><Radio toggle checked={settings.male} onChange={() => onChange('male')}/></span>
+        <p className="settingsItem">Male:</p> <span><Radio toggle checked={settings.male} onChange={() => onChange('male')}/></span>
         </div>
         </>
 ); 
