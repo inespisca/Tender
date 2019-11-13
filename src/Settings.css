@@ -68,3 +68,6 @@ there isn't a need to separate the last option from the nothingness below */
 (and kudos to Elena for finding this out) we went to inspector to find the name given to the radio toggles so we could change their colour and we did it!
 The first code is for a few seconds after the toggle is pressed, the second code is to change the color during the animation of pressing the toggle, so our
 button can always be pink and stay pink the whole time */
+
+/* aligning fix items*/
+.settingsItem{width: 95px;}
