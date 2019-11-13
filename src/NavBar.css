@@ -1,3 +1,5 @@
+main{ margin-top: 100px;}
+
 .navBarCustom{
     position : absolute;
     width : 99%;
@@ -23,4 +25,12 @@
    color:#EC9993 ;
 }
 
+/*navbar little changes*/
+.fixed-top{ padding-bottom: 0px!important;}
+.navbar-toggler:hover, .navbar-toggler:focus { outline: 0;}
+span.navbar-toggler-icon:focus {outline: 0;}
+.navbar-light .navbar-nav .show > .nav-link, 
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show, 
+.navbar-light .navbar-nav .nav-link.active { color: #EC9993!important;}
 
