@@ -7,7 +7,9 @@ import Messages from './Messages';
 import NavBar from './NavBar';
 import Chat from './Chat';
 import Profile from './Profile';
+import ChatTenderUser from './ChatTenderUser';
 import { withRouter, useHistory } from "react-router-dom";
+import ChatTenderUsers from './ChatTenderUser';
 
 
 const ourselves = [
@@ -93,7 +95,6 @@ class App extends Component {
         dob: {},
       },
       randomUsers: [],
-      // isLoaded: false,
       selectedUser: {},
       settings: {
         smoker: false,
@@ -147,7 +148,6 @@ class App extends Component {
       .then(response => response.json())
       .then(data => {
         this.setState({
-          // isLoaded : true,
           randomUser: data.results[0],
         })
       }
@@ -197,8 +197,9 @@ class App extends Component {
           <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} chuckNorrisQuote={this.state.chuckNorrisQuote} />} />
           <Route exact path="/settings" render={() => <Settings settings={this.state.settings} onChange={this.handleChangeSetting} />} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} onSelectUser={this.handleSelectUser} />} />
-          <Route exact path="/chat" render={() => <Chat randomUsers={this.state.randomUsers} />} />
+          <Route exact path="/chat" render={() => <Chat randomUsers={this.state.randomUsers} user={this.state.selectedUser}/>} />
           <Route exact path="/profile" render={() => <Profile user={this.state.selectedUser} />} />
+          <Route exact path="/chatTenderUser" render={() => <ChatTenderUser user={this.state.selectedUser} />} />
         </Switch>
       </>
     );

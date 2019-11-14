@@ -1,12 +1,18 @@
 import React from "react";
 import ChatMessages from "./ChatMessages"; 
 import ChatShowingNoMessages from "./ChatShowingNoMessages";
-const ChatMessagesDisplay = ({sentMessages, timeNow, randomUsers}) => {
+import ChatTenderUser from "./ChatTenderUser";
+
+const ChatMessagesDisplay = ({sentMessages, timeNow, user}) => {
     
-    if
-    //(randomUsers.message){
-    //    return <ChatMessages-TenderUsers randomUsers={randomUsers}/>
-    //}else if
+    if(user.message){// any user was clicked 
+        return (
+            <>
+            <ChatTenderUser user={user}/>
+            <ChatMessages sentMessages={sentMessages} timeNow={timeNow}/>
+            </>
+        )
+    }else if
     (sentMessages[0]){
         return <ChatMessages sentMessages={sentMessages} timeNow={timeNow}/> 
     }else{

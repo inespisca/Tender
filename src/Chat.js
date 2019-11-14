@@ -42,7 +42,7 @@ class Chat extends Component {
 
         <div className="chat-spaceForMessages">
           <div className="chat-spaceForMessagesScroll">
-            <ChatMessagesDisplay sentMessages={this.state.sentMessages} timeNow={this.state.timeNow} />
+            <ChatMessagesDisplay sentMessages={this.state.sentMessages} timeNow={this.state.timeNow} user={this.props.user}/>
           </div>
 
           <form className="chat-chatForm">

@@ -25,10 +25,8 @@ const Message = ({ user, location, onSelectUser }) => {
             <div className='message-name'>
                 {user.name.first} {user.name.last}
             </div>
-            <div className="message-content">
-                <Link to="/chat" key={user.name} className="link">
+            <div className="message-content" onClick={() => onSelectUser(user, '/chatTenderUser')}>
                     {formatMessage()}
-                </Link>
             </div>
             <div className="message-date">
                 {user.date ? user.date : "29 oct."}
