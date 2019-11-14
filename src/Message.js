@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import './Message.css';
-import faker from 'faker';
 
 const Message = ({ user, location, onSelectUser }) => {
     const formatMessage = () => {
