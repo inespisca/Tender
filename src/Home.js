@@ -4,10 +4,10 @@ import Description from './Description';
 import MatchText from './MatchText';
 import { isContainer } from 'postcss-selector-parser';
 
-const Home = ({ randomUser, newUser, chuckNorrisQuote, settings }) => {
+const Home = ({ randomUser, newUser, settings }) => {
 
-    const [isMatch, setIsMatch] = useState (false)
-    const [isDecided, setIsDecided] = useState (false)
+    const [isMatch, setIsMatch] = useState(false)
+    const [isDecided, setIsDecided] = useState(false)
 
     const handleNewUser = () => {
         newUser();
@@ -21,15 +21,15 @@ const Home = ({ randomUser, newUser, chuckNorrisQuote, settings }) => {
     }
 
     const handleClassName = () => {
-        if(isDecided){
-            if(isMatch){
+        if (isDecided) {
+            if (isMatch) {
                 return "mainImage-transparent"
             } else {
                 return "mainImage-bright"
             }
-        }else{
+        } else {
             return "mainImage"
-        } 
+        }
     }
 
     return (
@@ -38,21 +38,21 @@ const Home = ({ randomUser, newUser, chuckNorrisQuote, settings }) => {
                 {
                     randomUser.name !== undefined &&
                     <div className="swipe-area">
-                        <button className = {isDecided && "off-buttons"} onClick={handleNewUser}> NOBODY LOVES YOU</button>
+                        <button className={isDecided && "off-buttons"} onClick={handleNewUser}> NOBODY LOVES YOU</button>
                         <div className="wrapper">
                             <img className={handleClassName()} src={randomUser.picture.large} alt="Tender user" />
                             <h1> {randomUser.name.first} {randomUser.name.last} </h1>
                             <h2> {randomUser.dob.age} years old </h2>
                         </div>
-                        <button className = {isDecided && "off-buttons"} onClick={handleMatch}> 
+                        <button className={isDecided && "off-buttons"} onClick={handleMatch}>
                             MARRY ME
                         </button>
                     </div>
                 }
             </div>
-            { isDecided ? 
-                <MatchText isMatch={isMatch} handleNewUser={handleNewUser} isDecided={isDecided}/>
-                : <Description chuckNorrisQuote={chuckNorrisQuote} settings={settings} />
+            {isDecided ?
+                <MatchText isMatch={isMatch} handleNewUser={handleNewUser} isDecided={isDecided} />
+                : <Description user={randomUser} settings={settings} />
             }
         </>
     )
