@@ -32,12 +32,18 @@ class Chat extends Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+      if(this.props.user !== prevProps.user){
+        this.setState({ sentMessages: [] })
+      }
+  }
+
   render() {
     return (
       <div className="chat">
 
         <div className="chat-contacts">
-          <Messages randomUsers={this.props.randomUsers} />
+          <Messages randomUsers={this.props.randomUsers} onSelectUser={this.props.onSelectUser} />
         </div>
 
         <div className="chat-spaceForMessages">

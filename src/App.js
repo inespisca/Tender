@@ -10,6 +10,7 @@ import Profile from './Profile';
 import ChatTenderUser from './ChatTenderUser';
 import { withRouter, useHistory } from "react-router-dom";
 import ChatTenderUsers from './ChatTenderUser';
+import faker from 'faker';
 
 
 const ourselves = [
@@ -160,9 +161,12 @@ class App extends Component {
     fetch("https://randomuser.me/api/?results=10")
       .then(response => response.json())
       .then(data => {
+        const usersWithMessages = data.results.map((item) => {
+          const fakerMessage = faker.lorem.sentences();
+          return  { ...item, message: fakerMessage };
+        })
         this.setState({
-          // isLoaded : true,
-          randomUsers: [...ourselves, ...data.results],
+          randomUsers: [...ourselves, ...usersWithMessages],
         })
       }
       )
@@ -185,7 +189,9 @@ class App extends Component {
 
   handleSelectUser = (clickedUser, nextRoute) => {
     this.setState({ selectedUser: clickedUser }, () => {
-      this.props.history.push(nextRoute);
+      if(nextRoute){
+        this.props.history.push(nextRoute);
+      }
     });
   }
 
@@ -197,10 +203,14 @@ class App extends Component {
           <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} chuckNorrisQuote={this.state.chuckNorrisQuote} />} />
           <Route exact path="/settings" render={() => <Settings settings={this.state.settings} onChange={this.handleChangeSetting} />} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} onSelectUser={this.handleSelectUser} />} />
-          <Route exact path="/chat" render={() => <Chat randomUsers={this.state.randomUsers} user={this.state.selectedUser}/>} />
+          <Route exact path="/chat" render={() => 
+            <Chat 
+              randomUsers={this.state.randomUsers} 
+              user={this.state.selectedUser} 
+              onSelectUser={this.handleSelectUser}/>} 
+          />
           <Route exact path="/profile" render={() => <Profile user={this.state.selectedUser} />} />
-          <Route exact path="/chatTenderUser" render={() => <ChatTenderUser user={this.state.selectedUser} />} />
-        </Switch>
+         </Switch>
       </>
     );
   }
