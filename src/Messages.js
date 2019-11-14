@@ -5,12 +5,18 @@ import './Message.css';
 
 class Messages extends Component {
     render() {
-        const { randomUsers } = this.props
+        const { randomUsers, onSelectUser } = this.props
         return (
             <div className="msg">
                 {
                     randomUsers.map(user => {
-                        return <Message user={user} key={user.name.first} />
+                        return (
+                            <Message
+                                user={user}
+                                key={user.name.first}
+                                onSelectUser={onSelectUser}
+                            />
+                        )
                     })
                 }
             </div>
