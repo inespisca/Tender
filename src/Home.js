@@ -3,6 +3,7 @@ import './Home.css';
 import Description from './Description';
 import MatchText from './MatchText';
 import { isContainer } from 'postcss-selector-parser';
+import { Container, Row, Col } from "react-bootstrap";
 
 const Home = ({ randomUser, newUser, settings }) => {
 
@@ -32,26 +33,27 @@ const Home = ({ randomUser, newUser, settings }) => {
         }
     }
 
+
     return (
         <>
-            <div className="container">
+            <Container fluid>
+              
                 {
                     randomUser.name !== undefined &&
-                    <div className="swipe-area">
-                        <button className={isDecided && "off-buttons"} onClick={handleNewUser}> NOBODY LOVES YOU</button>
-                        <div className="wrapper">
-                            <img className={handleClassName()} src={randomUser.picture.large} alt="Tender user" />
-                            <h1> {randomUser.name.first} {randomUser.name.last} </h1>
-                            <h2> {randomUser.dob.age} years old </h2>
+                <Row>
+                    <Col xs={12} md={12}>
+                        <div className="d-flex justify-content-between align-items-center">
+                            <i className= {isDecided ? "off-buttons" : "fas fa-chevron-left" } onClick={handleNewUser}></i>
+                                <img className={handleClassName()} src={randomUser.picture.large} alt="Tender user" />  
+                                <i className={isDecided ? "off-buttons" : "fas fa-chevron-right" } onClick={handleMatch}></i>    
                         </div>
-                        <button className={isDecided && "off-buttons"} onClick={handleMatch}>
-                            MARRY ME
-                        </button>
-                    </div>
+                                
+                    </Col>
+                </Row>
                 }
-            </div>
-            {isDecided ?
-                <MatchText isMatch={isMatch} handleNewUser={handleNewUser} isDecided={isDecided} />
+            </Container>
+            { isDecided ? 
+                <MatchText isMatch={isMatch} handleNewUser={handleNewUser} isDecided={isDecided}/>
                 : <Description user={randomUser} settings={settings} />
             }
         </>

@@ -27,7 +27,10 @@ const ourselves = [
       LinkedIn: 'https://www.linkedin.com/in/alexandrapatriciosantos/',
       GitHub: 'https://github.com/alexandrapatriciosantos',
     },
-    description: 'blablabla'
+    description: 'blablabla',
+    dob: {
+      age:25
+    }
   },
   {
     name: {
@@ -44,7 +47,10 @@ const ourselves = [
       LinkedIn: 'https://www.linkedin.com/in/angelinariet/',
       GitHub: 'https://github.com/AngelinaRIET',
     },
-    description: 'blablabla'
+    description: 'blablabla',
+    dob: {
+      age:28
+    }
   },
   {
     name: {
@@ -61,7 +67,10 @@ const ourselves = [
       LinkedIn: 'https://www.linkedin.com/in/inesfpoliveira/',
       GitHub: 'https://github.com/inespisca',
     },
-    description: 'blablabla'
+    description: 'blablabla',
+    dob: {
+      age:26
+    }
   },
   {
     name: {
@@ -78,7 +87,10 @@ const ourselves = [
       LinkedIn: 'https://www.linkedin.com/in/elenaortegabaura/',
       GitHub: 'https://github.com/eobwebdevelop',
     },
-    description: 'blablabla'
+    description: 'blablabla',
+    dob: {
+      age:28
+    }
   },
 
 ]
@@ -88,13 +100,14 @@ class App extends Component {
     super(props);
 
     this.state = {
-      randomUser: {
+      selectedUser: {
         picture: {},
         name: {},
         dob: {},
+        description: ''
+
       },
       randomUsers: [],
-      selectedUser: {},
       settings: {
         smoker: false,
         vegetarian: false,
@@ -117,6 +130,7 @@ class App extends Component {
   componentDidMount() {
     this.getUser();
     this.getUsers();
+
   }
 
   getGenderSelection = () => {
@@ -139,12 +153,11 @@ class App extends Component {
           .then(res => res.json())
           .then(randomUserAPI => {
             this.setState({
-              randomUser: { ...randomUserAPI.results[0], description: chuckAPI.value },
+              selectedUser: { ...randomUserAPI.results[0], description: chuckAPI.value },
             })
           })
       })
   }
-
 
   getUsers = () => {
     fetch("https://randomuser.me/api/?results=10")
@@ -191,7 +204,7 @@ class App extends Component {
       <>
         <NavBar />
         <Switch>
-          <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} settings={this.state.settings} />} />
+          <Route exact path="/" render={() => <Home randomUser={this.state.selectedUser} newUser={this.getUser} settings={this.state.settings} />} />
           <Route exact path="/settings" render={() => <Settings settings={this.state.settings} onChange={this.handleChangeSetting} />} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} onSelectUser={this.handleSelectUser} />} />
           <Route exact path="/chat" render={() =>

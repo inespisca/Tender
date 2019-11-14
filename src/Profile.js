@@ -6,7 +6,7 @@ import Description from './Description';
 
 const Profile = ({ user, settings }) => {
 
-    console.log(user.picture)
+
     return (
         <>
             <div className="profile-pict">
