@@ -4,7 +4,7 @@ import Description from './Description';
 import MatchText from './MatchText';
 import { isContainer } from 'postcss-selector-parser';
 
-const Home = ({ randomUser, newUser, chuckNorrisQuote }) => {
+const Home = ({ randomUser, newUser, chuckNorrisQuote, settings }) => {
 
     const [isMatch, setIsMatch] = useState (false)
     const [isDecided, setIsDecided] = useState (false)

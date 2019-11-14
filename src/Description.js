@@ -32,17 +32,9 @@ class Description extends Component{
          <div className="container">
                 {/* <button onClick={this.handleShowDescriptionOnClick} >
                  MORE INFO </button> */}
-                <div className="smoker">
-                    { smoker ? "This person is a smoker" : "This person doesn't smoke" }
-                </div>
-                <div className="vegetarian">
-                    { vegetarian ? "This person is vegetarian" : "This person isn't vegetarian" } 
-                </div>
-                <div className="single">
-                    { single ? "This person is single" : "This person isn't single" }
-                </div>
                 <div className="moreInfo">
                     <h1>More Info</h1>
+                        {this.settings.smoker}
                         <h4>{this.props.chuckNorrisQuote}</h4>
                 </div>            
          </div>
