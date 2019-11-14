@@ -7,9 +7,7 @@ import Messages from './Messages';
 import NavBar from './NavBar';
 import Chat from './Chat';
 import Profile from './Profile';
-import ChatTenderUser from './ChatTenderUser';
 import { withRouter, useHistory } from "react-router-dom";
-import ChatTenderUsers from './ChatTenderUser';
 import faker from 'faker';
 
 
@@ -113,7 +111,6 @@ class App extends Component {
         male: true
 
       },
-      chuckNorrisQuote: '',
     };
   }
 
@@ -136,23 +133,16 @@ class App extends Component {
     //get quote at the same time as a new user
     fetch("https://api.chucknorris.io/jokes/random")
       .then(response => response.json())
-      .then(data => {
-        this.setState({
-          chuckNorrisQuote: data.value,
-
-        })
+      .then(chuckAPI => {
+        const url = `https://randomuser.me/api/?inc=gender,name,dob,picture${this.getGenderSelection()}`;
+        fetch(url)
+          .then(res => res.json())
+          .then(randomUserAPI => {
+            this.setState({
+              randomUser: { ...randomUserAPI.results[0], description: chuckAPI.value },
+            })
+          })
       })
-
-    const url = `https://randomuser.me/api/?inc=gender,name,dob,picture${this.getGenderSelection()}`;
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          randomUser: data.results[0],
-        })
-      }
-      )
-
   }
 
 
@@ -162,7 +152,8 @@ class App extends Component {
       .then(data => {
         const usersWithMessages = data.results.map((item) => {
           const fakerMessage = faker.lorem.sentences();
-          return  { ...item, message: fakerMessage };
+          const fakerDescription = faker.lorem.sentences();
+          return { ...item, message: fakerMessage, description: fakerDescription };
         })
         this.setState({
           randomUsers: [...ourselves, ...usersWithMessages],
@@ -189,7 +180,7 @@ class App extends Component {
 
   handleSelectUser = (clickedUser, nextRoute) => {
     this.setState({ selectedUser: clickedUser }, () => {
-      if(nextRoute){
+      if (nextRoute) {
         this.props.history.push(nextRoute);
       }
     });
@@ -200,23 +191,24 @@ class App extends Component {
       <>
         <NavBar />
         <Switch>
-          <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} chuckNorrisQuote={this.state.chuckNorrisQuote} settings={this.state.settings} />} />
+          <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} settings={this.state.settings} />} />
           <Route exact path="/settings" render={() => <Settings settings={this.state.settings} onChange={this.handleChangeSetting} />} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} onSelectUser={this.handleSelectUser} />} />
-          <Route exact path="/chat" render={() => 
-            <Chat 
-              randomUsers={this.state.randomUsers} 
-              user={this.state.selectedUser} 
-              onSelectUser={this.handleSelectUser}/>} 
+          <Route exact path="/chat" render={() =>
+            <Chat
+              randomUsers={this.state.randomUsers}
+              user={this.state.selectedUser}
+              onSelectUser={this.handleSelectUser} />}
           />
-          <Route exact path="/profile" render={() => <Profile user={this.state.selectedUser} />} />
-         </Switch>
+          <Route exact path="/profile" render={() =>
+            <Profile user={this.state.selectedUser} settings={this.state.settings} />} />
+        </Switch>
       </>
     );
   }
 }
-  // "settings={this.state.settings}" is being passed in both "Home" and "Settings" paths. In the "Settings" path, it's connected to make the settings
-  // component and to link it to the radio toggles so the toggles control what's going on. In the "Home" path, it's meant to pass the props to the Homepage
-  // and, therefore, to the "Description" component, so the sentence controlled by the settings appears in the description.
+// "settings={this.state.settings}" is being passed in both "Home" and "Settings" paths. In the "Settings" path, it's connected to make the settings
+// component and to link it to the radio toggles so the toggles control what's going on. In the "Home" path, it's meant to pass the props to the Homepage
+// and, therefore, to the "Description" component, so the sentence controlled by the settings appears in the description.
 
 export default withRouter(App);

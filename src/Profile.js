@@ -1,9 +1,10 @@
 import React from 'react';
 import './Profile.css';
+import Description from './Description';
 
 
 
-const Profile = ({ user }) => {
+const Profile = ({ user, settings }) => {
 
     console.log(user.picture)
     return (
@@ -11,6 +12,7 @@ const Profile = ({ user }) => {
             <div className="profile-pict">
                 <img src={user.picture.large} alt="Tender user" />
             </div>
+            <Description user={user} settings={settings} />
             <div className="profile-name">
                 {user.name.first} {user.name.last}
             </div>
@@ -20,9 +22,7 @@ const Profile = ({ user }) => {
             <div>
                 {user.contact ? user.contact.GitHub : "https://github.com/orgs/WildCodeSchool"}
             </div>
-            <div className="profile-content">
-                {user.description}
-            </div>
+  
         </>
 
     )
