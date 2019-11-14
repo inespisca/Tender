@@ -52,9 +52,9 @@ class Chat extends Component {
           </div>
 
           <form className="chat-chatForm">
-            <input
-              type="text"
-              className="chat-textInput"
+            <textarea
+              className="chat-textArea"
+              rows="2"
               value={this.state.userMessage}
               onChange={this.showCurrentlyTyping} />
             <input

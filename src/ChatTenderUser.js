@@ -1,5 +1,5 @@
 import React from "react"
-import "./ChatMessages.css"
+import "./ChatTenderUser.css"
 import { Container, Row, Col } from "react-bootstrap";
 
 
@@ -7,13 +7,13 @@ const ChatTenderUser = ({user}) => {
 
 return(
     <Container>
-        <Row className={"sentMessagesRow-TenderUsers"}>
+        <Row className={"tenderUserMessage-Row"}>
         <Col  md={4} sm={5} xs={8} >
                     <div>
-                        <div className="chatMessages-TenderUsers-newMessage">
+                        <div className=" tenderUserMessage">
                             <p> {user.message} </p>
                         </div>
-                        <div className="chatMessages-TenderUsers-spaceBetweenMessages"></div>
+                        <div className="tenderUserMessage-spaceBetween"></div>
                     </div>
             </Col>
         </Row>

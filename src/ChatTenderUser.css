@@ -1,19 +1,22 @@
-.chatMessages-TenderUsers-newMessage{
+.tenderUserMessage{
     font-family: 'Montserrat', sans-serif;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #EC9993; 
-    text-align: justify;
-    font-size: 1.8vh;
-    overflow-wrap: break-word;
     color: 	#303030;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    text-align: justify;
+    padding: 15px;
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    background-color: #efa9a4; 
+    box-shadow: 3px 4px #f5c8c5;
 }
 
-.chatMessages-TenderUsers-spaceBetweenMessages{
+.tenderUserMessage-spaceBetween{
     padding: 10px;
 }
 
-.sentMessagesRow-TenderUsers{
+.tenderUserMessage-Row{
     margin-bottom: 10px;
-    overflow:auto
+    /* overflow:auto */
+
 }
