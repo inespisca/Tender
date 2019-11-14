@@ -17,7 +17,7 @@ class NavBar extends Component {
       <div>
         <main>
         <MDBNavbar className="navBarCustom" color="light-blue lighten-3" light fixed="top">
-          <NavbarBrand className="logo-tender" href="#home">
+          <NavbarBrand className="logo-tender" href="/">
             <img className="logo-tender" src={"https://i.imgur.com/LN19krz.png"} style={{ width: 50 }} />
             Tender</NavbarBrand>
           <MDBNavbarToggler className="navbar-icon" onClick={this.toggleCollapse('navbarCollapse1')} />

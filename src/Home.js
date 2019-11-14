@@ -5,7 +5,7 @@ import MatchText from './MatchText';
 import { isContainer } from 'postcss-selector-parser';
 import { Container, Row, Col } from "react-bootstrap";
 
-const Home = ({ randomUser, newUser, settings }) => {
+const Home = ({ randomUser, newUser, settings, onSelectUser, user}) => {
 
     const [isMatch, setIsMatch] = useState(false)
     const [isDecided, setIsDecided] = useState(false)
@@ -44,7 +44,7 @@ const Home = ({ randomUser, newUser, settings }) => {
                     <Col xs={12} md={12}>
                         <div className="d-flex justify-content-between align-items-center">
                             <i className= {isDecided ? "off-buttons" : "fas fa-chevron-left" } onClick={handleNewUser}></i>
-                                <img className={handleClassName()} src={randomUser.picture.large} alt="Tender user" />  
+                                <img className={handleClassName()} onClick={() => onSelectUser(user, '/profile')} src={randomUser.picture.large} alt="Tender user" />  
                                 <i className={isDecided ? "off-buttons" : "fas fa-chevron-right" } onClick={handleMatch}></i>    
                         </div>
                                 
