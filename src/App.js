@@ -27,7 +27,10 @@ const ourselves = [
       LinkedIn: 'https://www.linkedin.com/in/alexandrapatriciosantos/',
       GitHub: 'https://github.com/alexandrapatriciosantos',
     },
-    description: 'blablabla'
+    description: 'blablabla',
+    dob: {
+      age:25
+    }
   },
   {
     name: {
@@ -44,7 +47,10 @@ const ourselves = [
       LinkedIn: 'https://www.linkedin.com/in/angelinariet/',
       GitHub: 'https://github.com/AngelinaRIET',
     },
-    description: 'blablabla'
+    description: 'blablabla',
+    dob: {
+      age:28
+    }
   },
   {
     name: {
@@ -61,7 +67,10 @@ const ourselves = [
       LinkedIn: 'https://www.linkedin.com/in/inesfpoliveira/',
       GitHub: 'https://github.com/inespisca',
     },
-    description: 'blablabla'
+    description: 'blablabla',
+    dob: {
+      age:26
+    }
   },
   {
     name: {
@@ -78,7 +87,10 @@ const ourselves = [
       LinkedIn: 'https://www.linkedin.com/in/elenaortegabaura/',
       GitHub: 'https://github.com/eobwebdevelop',
     },
-    description: 'blablabla'
+    description: 'blablabla',
+    dob: {
+      age:28
+    }
   },
 
 ]

@@ -6,15 +6,14 @@ import { Container, Row, Col } from "react-bootstrap";
 const Description = ({ user, settings }) => {
     const changeName = () => {
         //ChangeTheName
-        console.log(user);
         const valueChucknorris = user.description;
         let chuckNorrisName = 'Chuck Norris';
         let userName = user.name.first;
         if(valueChucknorris.includes(chuckNorrisName)){
           const replace = valueChucknorris.replace(chuckNorrisName,userName);
           return replace
-  
         }
+        return user.description
     }
 
     return(
