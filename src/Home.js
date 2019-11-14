@@ -52,12 +52,10 @@ const Home = ({ randomUser, newUser, chuckNorrisQuote, settings }) => {
             </div>
             { isDecided ? 
                 <MatchText isMatch={isMatch} handleNewUser={handleNewUser} isDecided={isDecided}/>
-                : <Description chuckNorrisQuote={chuckNorrisQuote} settings={this.state.settings} />
+                : <Description chuckNorrisQuote={chuckNorrisQuote} settings={settings} />
             }
         </>
     )
 }
-
-// settings is going through from App.js to Description.js by using "settings={this.state.settings}" in the Description path.
 
 export default Home; 
