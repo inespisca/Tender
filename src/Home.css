@@ -14,14 +14,18 @@
     width: 65%;
 }
 .mainImage{
-    width:55%;
-    border: 5px solid black;
+    width: 40%;
+    border: 2px solid lightgray;
+    padding: 5px;
+    margin: 5% 15% 8% 15%;
 }
 
 .mainImage-transparent{
     width:40%;
     opacity: 0.5;
 }
+
+.mainImage-transparent 
 
 .mainImage-bright{
     width:40%;
@@ -38,11 +42,7 @@ button{
     cursor:pointer;
 }
 
-.moreInfo{ 
-    display: block;  
-    margin: 2% auto;
-    text-align: center; 
-}
+
 .moreInfo h4{ 
     text-align: center; 
     display:block; 
@@ -50,17 +50,24 @@ button{
     color:white; 
     padding:5%;
 }
-.none{ 
-    display:none; 
-    transition: all 0.8s ease;
-}
 
-.swipe-area{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+i.fas.fa-chevron-left, i.fas.fa-chevron-right{ font-size:40px; color:#EC9993; cursor:pointer;}
+.buttonFix.col-md-12.col-12 button { margin: 0px 25px; margin-bottom:5%;}
 
 .off-buttons{
     display: none;
 }
+
+
+/*Description*/
+.text-left.description.col-md-12.col-12 {
+    border: 1px solid #EC9993;
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+.swiper{ width:100vw; height:100vh}
+.tiny{font-size:12px;color:gray}
+.fas.fa-chevron-left:hover{color:gray; transition:all 0.8  ease;}
+.fas.fa-chevron-right:hover{color:gray; transition:all 0.8 ease;}

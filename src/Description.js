@@ -1,20 +1,34 @@
 import React, { Component } from 'react';
 import './Home.css';
+import { Container, Row, Col } from "react-bootstrap";
 
 
-const Description = ({ chuckNorrisQuote, settings }) => {
+const Description = ({ user, settings }) => {
+    const changeName = () => {
+        //ChangeTheName
+        const valueChucknorris = user.description;
+        let chuckNorrisName = 'Chuck Norris';
+        let userName = user.name.first;
+        if(valueChucknorris.includes(chuckNorrisName)){
+          const replace = valueChucknorris.replace(chuckNorrisName,userName);
+          return replace
+        }
+        return user.description
+    }
+
     return(
-        <div className="container">
-            <div className="settings">
-                <p>{settings.smoker? "Smoker" : "Non smoker"}</p>
-                <p>{settings.vegetarian? "Vegetarian" : "Non vegetarian"}</p>
-                <p>{settings.single? "Single" : "Married"}</p>
-                    <div className="moreInfo">
-                        <h1>More Info</h1>
-                            <h4>{chuckNorrisQuote}</h4>
-                    </div>
-            </div>            
-        </div>
+        <Container>
+            <Row>
+                <Col md={12} xs={12} className="text-left description">
+                    <p>{settings.smoker? "Smoker" : "Non smoker"}</p>
+                    <p>{settings.vegetarian? "Vegetarian" : "Non vegetarian"}</p>
+                    <p>{settings.single? "Single" : "Married"}</p>
+                    <span>Name: {user.name.first} {user.name.last}</span> ||  <span>Age: {user.dob.age} years old</span>
+                    <br/><span>Short description:</span> <h4>{changeName()}</h4>
+
+                </Col>
+            </Row>          
+        </Container>
     )
 }
 

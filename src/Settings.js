@@ -1,6 +1,6 @@
-import React from 'react'; 
+import React from 'react';
 import './Settings.css';
-import Preferences from './Preferences'
+import Preferences from './Preferences';
 import { Radio } from 'semantic-ui-react';
 
 const Settings = ({ settings, onChange }) => {
@@ -38,7 +38,7 @@ const Settings = ({ settings, onChange }) => {
                     <Radio toggle checked={settings.single} onChange={() => onChange('single')}/>
                 </span>
             </div>
-        </div> 
+        </div>
     )
 }
 //These settings are connected to the state in the App through the string at the end of each one. Ex: Smoker is connected to "smoker: false," in the App
