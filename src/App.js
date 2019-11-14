@@ -91,6 +91,7 @@ class App extends Component {
   componentDidMount() {
     this.getUser();
     this.getUsers();
+
   }
 
   getGenderSelection = () => {
@@ -104,6 +105,7 @@ class App extends Component {
   }
 
 
+
   getUser = () => {
     //get quote at the same time as a new user
     fetch("https://api.chucknorris.io/jokes/random")
@@ -114,6 +116,9 @@ class App extends Component {
 
         })
       })
+
+
+    
 
     const url = `https://randomuser.me/api/?inc=gender,name,dob,picture${this.getGenderSelection()}`;
     fetch(url)
@@ -127,6 +132,11 @@ class App extends Component {
       )
 
   }
+
+
+ 
+
+
 
 
   getUsers = () => {
