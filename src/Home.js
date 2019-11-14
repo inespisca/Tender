@@ -58,4 +58,7 @@ const Home = ({ randomUser, newUser, settings }) => {
     )
 }
 
+// The settings props are passed from the parent component (App.js) with "const Home = ({ randomUser, newUser, chuckNorrisQuote, settings }) => {" and then they
+// are passed to its child component through the part "settings={settings}" in "<Description chuckNorrisQuote={chuckNorrisQuote} settings={settings} />"
+
 export default Home; 
