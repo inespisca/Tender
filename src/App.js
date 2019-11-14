@@ -132,7 +132,6 @@ class App extends Component {
     }
   }
 
-
   getUser = () => {
     //get quote at the same time as a new user
     fetch("https://api.chucknorris.io/jokes/random")
@@ -172,8 +171,9 @@ class App extends Component {
       )
   }
 
-  // thanks to this part below, the user clicks in the settings toggle and the toggle turns true or false depending on the times they click.
-  //The handleChangeSetting below is connected to the Settings component thanks to the line {this.handleChangeSetting in the Router in the App}
+  // Thanks to this part below, the user clicks in the settings toggle and the toggle turns true or false depending on the times they click.
+  // The handleChangeSetting below is connected to the Settings component thanks to the line {this.handleChangeSetting in the Router in the App}
+
   handleChangeSetting = (settingName) => {
     this.setState((state) => {
       return {
@@ -200,7 +200,7 @@ class App extends Component {
       <>
         <NavBar />
         <Switch>
-          <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} chuckNorrisQuote={this.state.chuckNorrisQuote} />} />
+          <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} chuckNorrisQuote={this.state.chuckNorrisQuote} settings={this.state.settings} />} />
           <Route exact path="/settings" render={() => <Settings settings={this.state.settings} onChange={this.handleChangeSetting} />} />
           <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} onSelectUser={this.handleSelectUser} />} />
           <Route exact path="/chat" render={() => 
@@ -215,5 +215,8 @@ class App extends Component {
     );
   }
 }
+  // "settings={this.state.settings}" is being passed in both "Home" and "Settings" paths. In the "Settings" path, it's connected to make the settings
+  // component and to link it to the radio toggles so the toggles control what's going on. In the "Home" path, it's meant to pass the props to the Homepage
+  // and, therefore, to the "Description" component, so the sentence controlled by the settings appears in the description.
 
 export default withRouter(App);
