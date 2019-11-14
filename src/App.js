@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter, Switch, NavLink } from 'react-router-dom';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import Settings from './Settings';
 import Messages from './Messages';
 import NavBar from './NavBar';
 import Chat from './Chat';
+import Profile from './Profile';
+import { withRouter, useHistory } from "react-router-dom";
+import faker from 'faker';
 
 
 const ourselves = [
@@ -16,9 +19,32 @@ const ourselves = [
     },
     picture: {
       thumbnail: 'https://i.imgur.com/EkLnHof.jpg',
+      large: 'https://i.imgur.com/fKVgPRR.jpg',
     },
     message: 'Hey handsome! How are you?',
-    date: '5 nov.'
+    date: '5 nov.',
+    contact: {
+      LinkedIn: 'https://www.linkedin.com/in/alexandrapatriciosantos/',
+      GitHub: 'https://github.com/alexandrapatriciosantos',
+    },
+    description: 'blablabla'
+  },
+  {
+    name: {
+      first: 'Angélina',
+      last: 'Riet',
+    },
+    picture: {
+      thumbnail: 'https://i.imgur.com/t4iBPv7.jpg',
+      large: 'https://i.imgur.com/knxzOV6.jpg',
+    },
+    message: 'Voulez-vous coucher avec moi ce soir? ;)',
+    date: '31 oct.',
+    contact: {
+      LinkedIn: 'https://www.linkedin.com/in/angelinariet/',
+      GitHub: 'https://github.com/AngelinaRIET',
+    },
+    description: 'blablabla'
   },
   {
     name: {
@@ -27,9 +53,15 @@ const ourselves = [
     },
     picture: {
       thumbnail: 'https://i.imgur.com/v7zP5R8.jpg',
+      large: 'https://i.imgur.com/Brhn4Tn.jpg',
     },
     message: "You make my booleans come true!!",
-    date: '4 nov.'
+    date: '4 nov.',
+    contact: {
+      LinkedIn: 'https://www.linkedin.com/in/inesfpoliveira/',
+      GitHub: 'https://github.com/inespisca',
+    },
+    description: 'blablabla'
   },
   {
     name: {
@@ -38,22 +70,17 @@ const ourselves = [
     },
     picture: {
       thumbnail: 'https://i.imgur.com/p9fIRKM.jpg',
+      large: 'https://i.imgur.com/wuUXt6P.jpg',
     },
     message: 'Holà que tal',
-    date: '3 nov.'
+    date: '3 nov.',
+    contact: {
+      LinkedIn: 'https://www.linkedin.com/in/elenaortegabaura/',
+      GitHub: 'https://github.com/eobwebdevelop',
+    },
+    description: 'blablabla'
   },
 
-  {
-    name: {
-      first: 'Angélina',
-      last: 'Riet',
-    },
-    picture: {
-      thumbnail: 'https://i.imgur.com/t4iBPv7.jpg',
-    },
-    message: 'Voulez-vous coucher avec moi ce soir? ;)',
-    date: '31 oct.'
-  },
 ]
 
 class App extends Component {
@@ -61,13 +88,14 @@ class App extends Component {
     super(props);
 
     this.state = {
-      randomUser: {
+      selectedUser: {
         picture: {},
         name: {},
         dob: {},
+        description: ''
+
       },
       randomUsers: [],
-      // isLoaded: false,
       settings: {
         smoker: false,
         vegetarian: false,
@@ -84,7 +112,6 @@ class App extends Component {
         male: true
 
       },
-      chuckNorrisQuote: '',
     };
   }
 
@@ -104,55 +131,41 @@ class App extends Component {
     }
   }
 
-
-
   getUser = () => {
     //get quote at the same time as a new user
     fetch("https://api.chucknorris.io/jokes/random")
       .then(response => response.json())
-      .then(data => {
-        this.setState({
-          chuckNorrisQuote: data.value,
-
-        })
+      .then(chuckAPI => {
+        const url = `https://randomuser.me/api/?inc=gender,name,dob,picture${this.getGenderSelection()}`;
+        fetch(url)
+          .then(res => res.json())
+          .then(randomUserAPI => {
+            this.setState({
+              selectedUser: { ...randomUserAPI.results[0], description: chuckAPI.value },
+            })
+          })
       })
-
-
-    
-
-    const url = `https://randomuser.me/api/?inc=gender,name,dob,picture${this.getGenderSelection()}`;
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          // isLoaded : true,
-          randomUser: data.results[0],
-        })
-      }
-      )
-
   }
-
-
- 
-
-
-
 
   getUsers = () => {
     fetch("https://randomuser.me/api/?results=10")
       .then(response => response.json())
       .then(data => {
+        const usersWithMessages = data.results.map((item) => {
+          const fakerMessage = faker.lorem.sentences();
+          const fakerDescription = faker.lorem.sentences();
+          return { ...item, message: fakerMessage, description: fakerDescription };
+        })
         this.setState({
-          // isLoaded : true,
-          randomUsers: [...ourselves, ...data.results],
+          randomUsers: [...ourselves, ...usersWithMessages],
         })
       }
       )
   }
 
-  // thanks to this part below, the user clicks in the settings toggle and the toggle turns true or false depending on the times they click.
-  //The handleChangeSetting below is connected to the Settings component thanks to the line {this.handleChangeSetting in the Router in the App}
+  // Thanks to this part below, the user clicks in the settings toggle and the toggle turns true or false depending on the times they click.
+  // The handleChangeSetting below is connected to the Settings component thanks to the line {this.handleChangeSetting in the Router in the App}
+
   handleChangeSetting = (settingName) => {
     this.setState((state) => {
       return {
@@ -165,21 +178,38 @@ class App extends Component {
     })
   };
 
-  render() {
 
+  handleSelectUser = (clickedUser, nextRoute) => {
+    this.setState({ selectedUser: clickedUser }, () => {
+      if (nextRoute) {
+        this.props.history.push(nextRoute);
+      }
+    });
+  }
+
+  render() {
     return (
-      <BrowserRouter>
+      <>
         <NavBar />
         <Switch>
-          <Route exact path="/" render={() => <Home randomUser={this.state.randomUser} newUser={this.getUser} chuckNorrisQuote={this.state.chuckNorrisQuote} />} />
+          <Route exact path="/" render={() => <Home randomUser={this.state.selectedUser} newUser={this.getUser} settings={this.state.settings} />} />
           <Route exact path="/settings" render={() => <Settings settings={this.state.settings} onChange={this.handleChangeSetting} />} />
-          <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} />} />
-          <Route exact path="/chat" render={() => <Chat randomUsers={this.state.randomUsers} />} />
+          <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} onSelectUser={this.handleSelectUser} />} />
+          <Route exact path="/chat" render={() =>
+            <Chat
+              randomUsers={this.state.randomUsers}
+              user={this.state.selectedUser}
+              onSelectUser={this.handleSelectUser} />}
+          />
+          <Route exact path="/profile" render={() =>
+            <Profile user={this.state.selectedUser} settings={this.state.settings} />} />
         </Switch>
-
-      </BrowserRouter>
+      </>
     );
   }
 }
+// "settings={this.state.settings}" is being passed in both "Home" and "Settings" paths. In the "Settings" path, it's connected to make the settings
+// component and to link it to the radio toggles so the toggles control what's going on. In the "Home" path, it's meant to pass the props to the Homepage
+// and, therefore, to the "Description" component, so the sentence controlled by the settings appears in the description.
 
-export default App;
+export default withRouter(App);

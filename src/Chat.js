@@ -24,7 +24,7 @@ class Chat extends Component {
       this.setState((state) => {
         return {
           ...state,
-          sentMessages: [...state.sentMessages, state.userMessage],
+          sentMessages: [...state.sentMessages, [state.userMessage,  ]],
           timeNow: new Date(),
           userMessage: "",
         }
@@ -32,17 +32,23 @@ class Chat extends Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+      if(this.props.user !== prevProps.user){
+        this.setState({ sentMessages: [] })
+      }
+  }
+
   render() {
     return (
       <div className="chat">
 
         <div className="chat-contacts">
-          <Messages randomUsers={this.props.randomUsers} />
+          <Messages randomUsers={this.props.randomUsers} onSelectUser={this.props.onSelectUser} />
         </div>
 
         <div className="chat-spaceForMessages">
           <div className="chat-spaceForMessagesScroll">
-            <ChatMessagesDisplay sentMessages={this.state.sentMessages} timeNow={this.state.timeNow} />
+            <ChatMessagesDisplay sentMessages={this.state.sentMessages} timeNow={this.state.timeNow} user={this.props.user}/>
           </div>
 
           <form className="chat-chatForm">

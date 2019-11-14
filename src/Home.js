@@ -5,10 +5,10 @@ import MatchText from './MatchText';
 import { isContainer } from 'postcss-selector-parser';
 import { Container, Row, Col } from "react-bootstrap";
 
-const Home = ({ randomUser, newUser, chuckNorrisQuote, settings }) => {
+const Home = ({ randomUser, newUser, settings }) => {
 
-    const [isMatch, setIsMatch] = useState (false)
-    const [isDecided, setIsDecided] = useState (false)
+    const [isMatch, setIsMatch] = useState(false)
+    const [isDecided, setIsDecided] = useState(false)
 
     const handleNewUser = () => {
         newUser();
@@ -22,15 +22,15 @@ const Home = ({ randomUser, newUser, chuckNorrisQuote, settings }) => {
     }
 
     const handleClassName = () => {
-        if(isDecided){
-            if(isMatch){
+        if (isDecided) {
+            if (isMatch) {
                 return "mainImage-transparent"
             } else {
                 return "mainImage-bright"
             }
-        }else{
+        } else {
             return "mainImage"
-        } 
+        }
     }
 
 
@@ -49,19 +49,18 @@ const Home = ({ randomUser, newUser, chuckNorrisQuote, settings }) => {
                         </div>
                                 
                     </Col>
-                    {/* <Col className="buttonFix" xs={12} md={12}>
-                        <button className = {isDecided && "off-buttons"} onClick={handleNewUser}> NOBODY LOVES YOU</button>
-                        <button className = {isDecided && "off-buttons"} onClick={handleMatch}> MARRY ME </button>
-                    </Col> */}
                 </Row>
                 }
             </Container>
             { isDecided ? 
                 <MatchText isMatch={isMatch} handleNewUser={handleNewUser} isDecided={isDecided}/>
-                : <Description chuckNorrisQuote={chuckNorrisQuote} randomUser={randomUser}  settings={settings} />
+                : <Description user={randomUser} settings={settings} />
             }
         </>
     )
 }
+
+// The settings props are passed from the parent component (App.js) with "const Home = ({ randomUser, newUser, chuckNorrisQuote, settings }) => {" and then they
+// are passed to its child component through the part "settings={settings}" in "<Description chuckNorrisQuote={chuckNorrisQuote} settings={settings} />"
 
 export default Home; 
