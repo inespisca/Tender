@@ -7,7 +7,7 @@ const Description = ({ chuckNorrisQuote, settings }) => {
         <div className="container">
             <div className="settings">
                 <p>{settings.smoker? "Smoker" : "Non smoker"}</p>
-                <p>{settings.vegetarian? "Vegetarian" : "Non-vegetarian"}</p>
+                <p>{settings.vegetarian? "Vegetarian" : "Non vegetarian"}</p>
                 <p>{settings.single? "Single" : "Married"}</p>
                     <div className="moreInfo">
                         <h1>More Info</h1>
