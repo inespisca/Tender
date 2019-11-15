@@ -19,11 +19,11 @@ const Message = ({ user, location, onSelectUser }) => {
             <div className="message-pict" onClick={() => onSelectUser(user, '/profile')}>
                 <img src={user.picture.thumbnail} alt="Tender user" className="avatar" />
             </div>
-            <div className='message-name'>
+            <div className='message-name' onClick={() => onSelectUser(user, '/profile')}>
                 {user.name.first} {user.name.last}
             </div>
             <div className="message-content" onClick={() => onSelectUser(user, '/chat')}>
-                    {formatMessage()}
+                {formatMessage()}
             </div>
             <div className="message-date">
                 {user.date ? user.date : "29 oct."}

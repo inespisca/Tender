@@ -9,25 +9,31 @@ const Description = ({ user, settings }) => {
         const valueChucknorris = user.description;
         let chuckNorrisName = 'Chuck Norris';
         let userName = user.name.first;
-        if(valueChucknorris.includes(chuckNorrisName)){
-          const replace = valueChucknorris.replace(chuckNorrisName,userName);
-          return replace
+        if (valueChucknorris.includes(chuckNorrisName)) {
+            const replace = valueChucknorris.replace(chuckNorrisName, userName);
+            return replace
         }
         return user.description
     }
 
-    return(
+    return (
         <Container>
             <Row>
                 <Col md={12} xs={12} className="text-left description">
-                    <p>{settings.smoker? "Smoker" : "Non smoker"}</p>
-                    <p>{settings.vegetarian? "Vegetarian" : "Non vegetarian"}</p>
-                    <p>{settings.single? "Single" : "Married"}</p>
+                    {
+                        (user.name.first !== "Angélina" && user.name.first !== "Inês"&& user.name.first !== "Elena" && user.name.first !== "Alexandra") &&
+                        <>
+                            <p>{settings.smoker ? "Smoker" : "Non smoker"}</p>
+                            <p>{settings.vegetarian ? "Vegetarian" : "Non vegetarian"}</p>
+                            <p>{settings.single ? "Single" : "Married"}</p>
+                        </>
+                    }
+
                     <span>Name: {user.name.first} {user.name.last}</span> ||  <span>Age: {user.dob.age} years old</span>
-                    <br/><span>Short description:</span> <h4>{changeName()}</h4>
+                    <br /><span>Short description:</span> <h4>{changeName()}</h4>
 
                 </Col>
-            </Row>          
+            </Row>
         </Container>
     )
 }
