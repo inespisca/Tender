@@ -14,20 +14,23 @@ const Profile = ({ user, settings }) => {
 
     return (
         <>
-            <div className="profile-pict">
-                <img src={user.picture.large} alt="Tender user" />
+            <div className="description-container">
+                <div classeName="profile-pict-container">
+                    <img src={user.picture.large} alt="Tender user" className="profile-pict" />
+                </div>
+
+                <Description user={user} settings={settings} />
+                <div>
+                    {user.contact ? user.contact.LinkedIn : ""}
+                </div>
+                <div>
+                    {user.contact ? user.contact.GitHub : ""}
+                </div>
+                <button className="matchText-goToChatBtn"
+                    onClick={handleRedirectToChat}
+                > Send a message </button>
             </div>
 
-            <Description user={user} settings={settings} />
-            <div>
-                {user.contact ? user.contact.LinkedIn : "https://www.linkedin.com/school/wild-codes-chool/"}
-            </div>
-            <div>
-                {user.contact ? user.contact.GitHub : "https://github.com/orgs/WildCodeSchool"}
-            </div>
-            <button className="matchText-goToChatBtn"
-                onClick={handleRedirectToChat}
-            > Send a message </button>
 
         </>
 

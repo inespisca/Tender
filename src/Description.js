@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Home.css';
 import { Container, Row, Col } from "react-bootstrap";
 
 
@@ -21,7 +20,7 @@ const Description = ({ user, settings }) => {
             <Row>
                 <Col md={12} xs={12} className="text-left description">
                     {
-                        (user.name.first !== "Angélina" && user.name.first !== "Inês"&& user.name.first !== "Elena" && user.name.first !== "Alexandra") &&
+                        (user.name.first !== "Angélina" && user.name.first !== "Inês" && user.name.first !== "Elena" && user.name.first !== "Alexandra") &&
                         <>
                             <p>{settings.smoker ? "Smoker" : "Non smoker"}</p>
                             <p>{settings.vegetarian ? "Vegetarian" : "Non vegetarian"}</p>
@@ -29,7 +28,7 @@ const Description = ({ user, settings }) => {
                         </>
                     }
 
-                    <span>Name: {user.name.first} {user.name.last}</span> ||  <span>Age: {user.dob.age} years old</span>
+                    <span>{user.name.first} {user.name.last}</span> - <span>{user.dob.age} years old</span>
                     <br /><span>Short description:</span> <h4>{changeName()}</h4>
 
                 </Col>
