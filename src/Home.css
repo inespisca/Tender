@@ -5,9 +5,9 @@
 
 .mainImage{
     width: 40%;
-    border: 2px solid lightgray;
+    border: 3px solid lightgray;
     padding: 5px;
-    margin: 5% 15% 8% 15%;
+    margin: 5% 5% 0 0;
 }
 
 .mainImage-transparent{
@@ -38,18 +38,17 @@ button{
     color:white; 
     padding:5%;
 }
+.rose{color:#EC9993;}
 
 i.fas.fa-chevron-left{
-    margin-left: 10%;
     font-size:40px; 
-    color:#EC9993; 
+    color:#E94B65; 
     cursor:pointer;
 } 
 i.fas.fa-chevron-right{ 
     font-size:40px; 
-    color:#EC9993; 
+    color:#E94B65; 
     cursor:pointer;
-    margin-right: 10%;
 }
 .buttonFix.col-md-12.col-12 button { margin: 0px 25px; margin-bottom:5%;}
 
@@ -68,5 +67,47 @@ i.fas.fa-chevron-right{
 }
 .swiper{ width:100vw; height:100vh}
 .tiny{font-size:12px;color:gray}
-.fas.fa-chevron-left:hover{color:gray; transition:all 0.8  ease;}
-.fas.fa-chevron-right:hover{color:gray; transition:all 0.8 ease;}
+.fas.fa-chevron-left:hover{color:#E94B65; transition:all 0.8  ease;}
+.fas.fa-chevron-right:hover{color:#E94B65; transition:all 0.8 ease;}
+.arrow { width: 117px; }
+p.left{ padding: 10px 0px; font-style: italic; border-radius: 25px; background: linear-gradient(262deg, #ff7854, #fd267d); color: white; margin-top: 9px; font-weight: bold;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.27); cursor:pointer}
+.arrow.left { margin-left: 6%; }
+p.right {margin-left: -55px;
+    padding: 10px 0px;
+    font-style: italic;
+    background: linear-gradient(262deg, #ff7854, #fd267d);
+    color: white;
+    margin-top: 9px;
+    width: 85px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.27);
+    cursor:pointer
+}
+.text-center.data p:hover, p.left:hover, p.right:hover{background: #fd5068;
+    background: linear-gradient(262deg, #fd5068, #fd5068);
+    transition: all ease 0.8s, }
+
+.text-center.data{ margin: 2% auto; width:100%}
+.text-center.name{
+    width: 80%; 
+    margin: 2% auto; 
+    text-align:center; 
+    padding:10px 0; 
+    color:#000; 
+    font-weight: bold; 
+    font-size: 26px; 
+    font-style: italic;
+}
+
+.text-center.data p{ width: 30%; margin: 0 auto; 
+    text-align:center; 
+    padding:10px 0; 
+    background: linear-gradient(262deg, #ff7854, #fd267d);
+    color:white; 
+    font-style: italic; 
+    border-radius: 25px; 
+    font-weight: bold; 
+    font-size: 16px; 
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.27);}
