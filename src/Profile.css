@@ -1,0 +1,46 @@
+.profile-container{
+    display: flex;
+    text-align: center;
+    width: 80%;
+}
+
+.profile-pict{
+    
+    text-align: center;
+}
+
+.pict{
+    width:300px;
+    border: 2px solid lightgray;
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+
+.social-link{
+    padding:5px; 
+}
+.description{
+    text-align: center;
+}
+
+.profile-name{
+    font-size:20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.profile-settings{
+    display: inline;
+    padding: 10px;
+}
+
+.profile-quote{
+    font-size:16px;
+}
+
+.profile-goToChatBtn{
+  text-align: center;
+}
