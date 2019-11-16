@@ -4,14 +4,13 @@ import './Profile.css';
 
 
 const Description = ({ user, settings }) => {
+    
     const changeName = () => {
         //ChangeTheName
         const valueChucknorris = user.description;
-        let chuckNorrisName = 'Chuck Norris';
         let userName = user.name.first;
-        if (valueChucknorris.includes(chuckNorrisName)) {
-            const replace = valueChucknorris.replace(chuckNorrisName, userName);
-            return replace
+        if (valueChucknorris.match(/chuck norris/gi)) {
+            return valueChucknorris.replace(/chuck norris/gi, userName);
         }
         return user.description
     }
