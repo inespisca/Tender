@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import Settings from './Settings';
@@ -7,7 +7,7 @@ import Messages from './Messages';
 import NavBar from './NavBar';
 import Chat from './Chat';
 import Profile from './Profile';
-import { withRouter, useHistory } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import faker from 'faker';
 
 
@@ -203,11 +203,26 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavBar />
+        <NavBar newUser={this.getUser}/>
         <Switch>
-          <Route exact path="/" render={() => <Home randomUser={this.state.selectedUser} user={this.state.selectedUser} onSelectUser={this.handleSelectUser} newUser={this.getUser} settings={this.state.settings} />} />
-          <Route exact path="/settings" render={() => <Settings settings={this.state.settings} onChange={this.handleChangeSetting} />} />
-          <Route exact path="/messages" render={() => <Messages randomUsers={this.state.randomUsers} onSelectUser={this.handleSelectUser} />} />
+          <Route exact path="/" render={() => 
+            <Home 
+              randomUser={this.state.selectedUser} 
+              user={this.state.selectedUser} 
+              onSelectUser={this.handleSelectUser} 
+              newUser={this.getUser} 
+              settings={this.state.settings} />} 
+          />
+          <Route exact path="/settings" render={() => 
+            <Settings 
+              settings={this.state.settings} 
+              onChange={this.handleChangeSetting} />} 
+          />
+          <Route exact path="/messages" render={() => 
+            <Messages 
+              randomUsers={this.state.randomUsers} 
+              onSelectUser={this.handleSelectUser} />} 
+          />
           <Route exact path="/chat" render={() =>
             <Chat
               randomUsers={this.state.randomUsers}
@@ -215,7 +230,10 @@ class App extends Component {
               onSelectUser={this.handleSelectUser} />}
           />
           <Route exact path="/profile" render={() =>
-            <Profile user={this.state.selectedUser} settings={this.state.settings} />} />
+            <Profile 
+              user={this.state.selectedUser} 
+              settings={this.state.settings} />} 
+          />
         </Switch>
       </>
     );

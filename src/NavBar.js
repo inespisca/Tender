@@ -4,12 +4,21 @@ import { MDBNavbar, NavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBColl
 import './NavBar.css';
 
 class NavBar extends Component {
-  state = {
-    collapseID: ''
+  constructor(props) {
+    super(props);
+ 
+    this.state = {
+      collapseID: ''
+    }
   }
 
   toggleCollapse = collapseID => () => {
     this.setState(prevState => ({ collapseID: (prevState.collapseID !== collapseID ? collapseID : '') }));
+  }
+
+  clickLogo = () => {
+    this.props.newUser(); 
+    this.setState({ collapseID: '' })
   }
 
   render() {
@@ -17,8 +26,8 @@ class NavBar extends Component {
       <div>
         <main>
         <MDBNavbar className="navBarCustom" color="light-blue lighten-3" light fixed="top">
-          <NavbarBrand className="logo-tender" href="/">
-            <img className="logo-tender" src={"https://i.imgur.com/LN19krz.png"} style={{ width: 50 }} />
+          <NavbarBrand className="logo-tender" href="/" onClick={this.clickLogo}>
+            <img className="logo-tender" src={"https://i.imgur.com/LN19krz.png"} style={{ width: 50 }} alt = "Tender Logo"/>
             Tender</NavbarBrand>
           <MDBNavbarToggler className="navbar-icon" onClick={this.toggleCollapse('navbarCollapse1')} />
 
