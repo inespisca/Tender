@@ -1,59 +1,48 @@
 .settings-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
     align-items: center;
-    padding-top: 12vh;
+    padding-top: 25vh;
+    background-image: url(https://i.imgur.com/OZvlyMS.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
 }
-
-/* settings-container: "settings-container" is the entire Settings area. It was named "settings" at first but, to avoid confusion with "setting", I changed the name to
-"settings-container", which was the name Angelina gave to it. Also Angelina's 20vh in the padding-top was copy-pasted into here to be together with
-the whole code and I increased it to 25vh because of the navbar. Please, lemme know if it doesn't look so good in your computers! */
 
 .setting {
     display: flex;
-    padding: 10px;
+    padding: 20px;
     justify-content: space-evenly;
-    align-items: center;
     width: 50%;
-    font-size: 18px;
+    font-size: 24px;
 }
-
-/* setting: I've cleaned up the CSS I was doing for this page, there was a section for smoker, another for vegetarian and so on but I decided to make the code cleaner
-by putting all the settings with the same name - "setting" */
 
 .border {
     width: 25%;
     border-bottom-style: solid;
     border-color: #cccccc;
     border-width: 1px;
+    align-items: center;
 }
-
-/* I got asked to make the border having the same size of the text so now I really had to make a new kind of div for the border, otherwise it wouldn't work */
 
 .first-setting {
     display: flex;
-    padding: 10px;
+    padding: 20px;
     justify-content: space-evenly;
     align-items: center;
     width: 50%;
     padding-top: 5vh;
-    font-size: 18px;
+    font-size: 24px;
 }
 
-/* first-setting: This is to be only used in the first setting to appear in the settings page. The difference is just the padding-top, which separates all the settings below
-from the title. It also includes the border because there will be settings after this one */
-
-
 .ui.toggle.checkbox input:checked ~ .box::before, .ui.toggle.checkbox input:checked ~ label::before {
-    background-color: #EC9993!important;}
+    background-color: #E94B65!important;}
 
 .ui.toggle.checkbox input:focus:checked~.box:before, .ui.toggle.checkbox input:focus:checked~label:before {
-    background-color: #EC9993!important;}
+    background-color: #E94B65!important;}
 
-/* These two things above aren't here by chance. The radio toggles were set be dark blue when active by default, which didn't match our website's design, so
-(and kudos to Elena for finding this out) we went to inspector to find the name given to the radio toggles so we could change their colour and we did it!
-The first code is for a few seconds after the toggle is pressed, the second code is to change the color during the animation of pressing the toggle, so our
-button can always be pink and stay pink the whole time */
 
-/* aligning fix items*/
-.settingsItem{width: 95px;}
+.settingsItem{
+    width: 95px;
+}

@@ -41,8 +41,5 @@ const Settings = ({ settings, onChange }) => {
         </div>
     )
 }
-//These settings are connected to the state in the App through the string at the end of each one. Ex: Smoker is connected to "smoker: false," in the App
-//thanks to the 'smoker' in "onChange('smoker')}". This means that if you switch the string text to 'Smoker' (with capital "S"), the radio toggle will
-//stop working.
 
 export default Settings; 
