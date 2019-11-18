@@ -5,7 +5,7 @@ import './Preferences.css';
 
 const Preferences = ({settings, onChange}) => (
     <>
-        <div className="first-setting">
+        <div className="setting">
             <p className="settingsItem">
                 Female:
             </p>
