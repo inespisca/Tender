@@ -36,37 +36,39 @@ const Home = ({ randomUser, newUser, settings, onSelectUser, user}) => {
 
     return (
         <>
-            <Container fluid>
-              
-                {
-                    randomUser.name !== undefined &&
-                <Row>
-                    <Col xs={12} md={12}>
-                        <div className="d-flex justify-content-between align-items-center">
-                            <div className="arrow left">
-                                <i className= {isDecided ? "off-buttons" : "fas fa-chevron-left" } onClick={handleNewUser}></i>
-                                <p className={isDecided ? "off-buttons" :"left"}> <sub className="rose">&tilde;</sub> Don't love you  <sub className="rose">&tilde;</sub></p>
-                            </div>
-                                <img className={handleClassName()} onClick={() => onSelectUser(user, '/profile')} src={randomUser.picture.large} alt="Tender user" />  
-                            <div className="arrow">    
-                                <i className={isDecided ? "off-buttons" : "fas fa-chevron-right" } onClick={handleMatch}></i> 
-                                <p className={isDecided ? "off-buttons" :"right"} onClick={handleMatch}> <sub className="rose">&tilde;</sub> Marry me <sub className="rose">&tilde;</sub></p> 
-                            </div>  
-                        </div>                                
-                    </Col>
-                </Row>
-}
-                <Row>
-                    <Col xs={12} md={12}>
-                        <div className={isDecided ? "off-buttons" :"text-center name"}>
-                            <p> {user.name.first}, {user.dob.age} </p>
-                        </div>
-                    </Col>
-                </Row>
-                           
-
+          <div className="homeCentered">
+                <Container>
                 
-            </Container>
+                    {
+                        randomUser.name !== undefined &&
+                    <Row>
+                        <Col xs={12} md={12}>
+                            <div className="d-flex justify-content-between align-items-center">
+                                <div className="arrow left">
+                                    <i className= {isDecided ? "off-buttons" : "fas fa-chevron-left d-xl-none" } onClick={handleNewUser}></i>
+                                    <p className={isDecided ? "off-buttons" :"left d-none d-xl-block"} onClick={handleNewUser}> <sub className="rose">&tilde;</sub> Bye, bye  <sub className="rose">&tilde;</sub></p>
+                                </div>
+                                    <img className={handleClassName()} onClick={() => onSelectUser(user, '/profile')} src={randomUser.picture.large} alt="Tender user" />  
+                                <div className="arrow">    
+                                    <i className={isDecided ? "off-buttons" : "fas fa-chevron-right d-xl-none" } onClick={handleMatch}></i> 
+                                    <p className={isDecided ? "off-buttons" :"right d-none d-xl-block"} onClick={handleMatch}> <sub className="rose">&tilde;</sub> Marry me <sub className="rose">&tilde;</sub></p> 
+                                </div>  
+                            </div>                                
+                        </Col>
+                    </Row>
+    }
+                    <Row>
+                        <Col xs={12} md={12}>
+                            <div className={isDecided ? "off-buttons" :"text-center name"}>
+                                <p> {user.name.first}, {user.dob.age} </p>
+                            </div>
+                        </Col>
+                    </Row>
+                            
+
+                    
+                </Container>
+            </div>
             { isDecided &&
                 <MatchText isMatch={isMatch} handleNewUser={handleNewUser} isDecided={isDecided}/>
             }
