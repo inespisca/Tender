@@ -4,7 +4,7 @@ import './Home.css';
 import { withRouter, useHistory } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 
-const MatchText = ({isMatch, handleNewUser}) => {
+const MatchText = ({isMatch, handleNewUser, use}) => {
 
     let history = useHistory ()
 
@@ -13,70 +13,41 @@ const MatchText = ({isMatch, handleNewUser}) => {
         handleNewUser()
     }
 
-    // if(isMatch){
-    //     return (
-    //         <div className ="isMatch">
-    //             <div className="noMatch">
-    //                 <h1> Sorry, they don't like you back. <br/> Better luck next time. </h1>
-    //                 <button  
-    //                     className="matchText-newUser"
-    //                     onClick={handleNewUser}
-    //                 > Keep searching </button>
-    //             </div>
-    //         </div>
-    //     )
-    // } else{
-    //     return (
-    //         <div className ="isMatch">
-    //             <div className ="yesMatch">                    
-    //                 <h1> They like you back </h1>
-    //                 <img
-    //                     className="matchText-tenderLogo" 
-    //                     src="https://i.imgur.com/LN19krz.png" alt="Tender Logo">
-    //                 </img>
-    //             </div>
-    //             <div className="matchText-yesBtns">
-    //                 <button className="matchText-goToChatBtn" 
-    //                     onClick={handleRedirectToChat}
-    //                 > Send them a message </button>
-    //                 <button 
-    //                     className="matchText-newUser"
-    //                     onClick={handleNewUser}
-    //                 > Keep searching  </button>
-    //             </div> 
-    //         </div>
-    //     )
-    // }  
     if(isMatch){
         return (
-            <Row>
-                <Col xs={12} md={12}>
-                    <div className="text-center data" onClick={handleNewUser}>
-                    <p> Sorry, they don't like you back. <br/> Better luck next time. </p>
-                    </div>
-                </Col>
-            </Row>
+            <Container>
+                <Row>
+                    <Col xs={12} md={12}>
+                        <div className="noMatch">
+                            <p className="text-center name"> Sorry, they don't like you back. Better luck next time. </p>                   
+                        </div>
+                        <p className="left searching" onClick={handleNewUser}> Keep searching</p>
+                    </Col>
+                </Row>
+            </Container>
         )
     } else{
         return (
-            <div className ="isMatch">
-                <div className ="yesMatch">                    
-                    <h1> They like you back </h1>
-                    <img
+            <Container>
+            <Row>
+                <Col xs={12} md={12}>
+                    <div className="noMatch">
+                        <p className="text-center name"> They like you back  <img
                         className="matchText-tenderLogo" 
-                        src="https://i.imgur.com/LN19krz.png" alt="Tender Logo">
-                    </img>
-                </div>
-                <div className="matchText-yesBtns">
-                    <button className="matchText-goToChatBtn" 
-                        onClick={handleRedirectToChat}
-                    > Send them a message </button>
-                    <button 
-                        className="matchText-newUser"
-                        onClick={handleNewUser}
-                    > Keep searching  </button>
-                </div> 
-            </div>
+                         src="https://res.cloudinary.com/ddoc8nfxb/image/upload/v1573925533/ff7854heart_mhabmy.png" alt="Tender Logo">
+                    </img> </p>                   
+                    </div>
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={{ span: 12}} md={{ span: 6, offset: 3 }}>
+                    <div className="d-flex justify-content-center align-items-center married">
+                        <p className="left searching" onClick={handleRedirectToChat}> Send them a message </p> 
+                        <p className="left searching" onClick={handleNewUser}> Keep searching</p>
+                    </div>
+                </Col>
+            </Row>
+        </Container>
         )
     }  
 

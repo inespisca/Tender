@@ -51,12 +51,12 @@ const Home = ({ randomUser, newUser, settings, onSelectUser, user}) => {
                                     <img className={handleClassName()} onClick={() => onSelectUser(user, '/profile')} src={randomUser.picture.large} alt="Tender user" />  
                                 <div className="arrow">    
                                     <i className={isDecided ? "off-buttons" : "fas fa-chevron-right d-xl-none" } onClick={handleMatch}></i> 
-                                    <p className={isDecided ? "off-buttons" :"right d-none d-xl-block"} onClick={handleMatch}> <sub className="rose"></sub> Marry me! <sub className="rose"></sub></p> 
+                                    <p className={isDecided ? "off-buttons" :"right d-none d-xl-block"}  onClick={handleMatch}> <sub className="rose">&tilde;</sub> Marry me <sub className="rose">&tilde;</sub></p> 
                                 </div>  
                             </div>                                
                         </Col>
                     </Row>
-    }
+                    }
                     <Row>
                         <Col xs={12} md={12}>
                             <div className={isDecided ? "off-buttons" :"text-center name"}>
@@ -64,14 +64,12 @@ const Home = ({ randomUser, newUser, settings, onSelectUser, user}) => {
                             </div>
                         </Col>
                     </Row>
-                            
-
                     
-                </Container>
-            </div>
             { isDecided &&
                 <MatchText isMatch={isMatch} handleNewUser={handleNewUser} isDecided={isDecided}/>
             }
+                </Container>
+            </div>
         </>
     )
 }

@@ -82,6 +82,11 @@ p.left{ padding: 10px 0px;
     text-align: center;
 }
 
+p.left.searching{
+    min-width:200px;
+    margin: 5px auto;
+}
+
 p.right {margin-left: -55px;
     padding: 10px 0px;
     font-style: italic;
@@ -135,8 +140,12 @@ p.right {margin-left: -55px;
 
     /*Media Query*/
 
+
+    @media only screen and (max-width: 769px){
+        .d-flex.justify-content-center.align-items-center.married { display: block!important; }
+    }
     @media only screen and (max-width: 475px){
         .d-flex.justify-content-between.align-items-center{width:100%; margin:0 auto}
         .mainImage{ width:80%;}
-
+        .text-center.name{font-size: 20px;}
     }
