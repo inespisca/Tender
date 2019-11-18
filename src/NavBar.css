@@ -1,11 +1,16 @@
-main{ margin-top: 75px; border-bottom:1px solid #EC9993}
+main{ margin-top: 55px;
+    padding-bottom: 10px;
+}
 
 .navBarCustom{
     position : absolute;
-    width : 99%;
+    width : 100%;
     z-index: 10;
     text-align: center;
-    background-color: white; 
+    background: linear-gradient(262deg, #ff7854, #fd267d); 
+}
+.nav-size{
+    height: 55px;
 }
 
 .navbar-icon{
@@ -14,7 +19,6 @@ main{ margin-top: 75px; border-bottom:1px solid #EC9993}
 }
 
 .logo-tender{
-    color: #EC9993; 
     opacity:0.9;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
