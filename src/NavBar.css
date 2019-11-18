@@ -7,7 +7,8 @@ main{ margin-top: 55px;
     width : 100%;
     z-index: 10;
     text-align: center;
-    background: linear-gradient(262deg, #ff7854, #fd267d); 
+    background: linear-gradient(262deg, #ff7854, #fd267d);
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.27);
 }
 .nav-size{
     height: 55px;
@@ -18,15 +19,28 @@ main{ margin-top: 55px;
         height:50px;
 }
 
+.navbar-ic{
+    display: flex;
+    justify-content: center;
+}
+
 .logo-tender{
     opacity:0.9;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
+.app-name{
+    color:white;
+    font-weight: bold;
+    padding-top: 4px;
+    padding-left: 2px;
+}
+
 .link-menu{
-   font-size: 1.2em;
-   color:#EC9993 ;
+   font-size: 1em;
+   color:brown;
+   font-weight: bold;
 }
 
 /*navbar little changes*/

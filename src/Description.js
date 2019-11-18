@@ -4,7 +4,7 @@ import './Profile.css';
 
 
 const Description = ({ user, settings }) => {
-    
+
     const changeName = () => {
         const valueChucknorris = user.description;
         let userName = user.name.first;
@@ -19,7 +19,7 @@ const Description = ({ user, settings }) => {
             <Row>
                 <Col md={12} xs={12} className="description">
                     <div className="profile-name">
-                        <span>{user.name.first} {user.name.last}</span> - <span>{user.dob.age} years old</span>
+                        <span>{user.name.first} {user.name.last}</span> - <span>{user.dob.age} y/o</span>
                         <br /><h4 className="profile-quote">{changeName()}</h4>
                     </div>
                     {
