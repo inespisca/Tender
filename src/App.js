@@ -27,9 +27,9 @@ const ourselves = [
       LinkedIn: 'https://www.linkedin.com/in/alexandrapatriciosantos/',
       GitHub: 'https://github.com/alexandrapatriciosantos',
     },
-    description: 'blablabla',
+    description: "I like long walks on the beach, MDN web docs, and proper indentation.Dislikes : infinite loops, \"failed to render\"messages, and coding in the master branch. I am currently studying at Wild Code School, learning all about JavaScript, React, and SQL. I'm really busy right now, but I'd love to meet for a drink after school some time. If you're up for it email me at alexandraps17@gmail.com. Speaks: Portuguese, Japanese, HTML, CSS, JS, and JSX. My favourite movie is Mean Girls. I can make a great Carbonara.",
     dob: {
-      age:25
+      age: 25
     }
   },
   {
@@ -49,7 +49,7 @@ const ourselves = [
     },
     description: 'blablabla',
     dob: {
-      age:28
+      age: 28
     }
   },
   {
@@ -69,7 +69,7 @@ const ourselves = [
     },
     description: 'blablabla',
     dob: {
-      age:26
+      age: 26
     }
   },
   {
@@ -89,7 +89,7 @@ const ourselves = [
     },
     description: 'blablabla',
     dob: {
-      age:28
+      age: 28
     }
   },
 
@@ -203,25 +203,25 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavBar newUser={this.getUser}/>
+        <NavBar newUser={this.getUser} />
         <Switch>
-          <Route exact path="/" render={() => 
-            <Home 
-              randomUser={this.state.selectedUser} 
-              user={this.state.selectedUser} 
-              onSelectUser={this.handleSelectUser} 
-              newUser={this.getUser} 
-              settings={this.state.settings} />} 
+          <Route exact path="/" render={() =>
+            <Home
+              randomUser={this.state.selectedUser}
+              user={this.state.selectedUser}
+              onSelectUser={this.handleSelectUser}
+              newUser={this.getUser}
+              settings={this.state.settings} />}
           />
-          <Route exact path="/settings" render={() => 
-            <Settings 
-              settings={this.state.settings} 
-              onChange={this.handleChangeSetting} />} 
+          <Route exact path="/settings" render={() =>
+            <Settings
+              settings={this.state.settings}
+              onChange={this.handleChangeSetting} />}
           />
-          <Route exact path="/messages" render={() => 
-            <Messages 
-              randomUsers={this.state.randomUsers} 
-              onSelectUser={this.handleSelectUser} />} 
+          <Route exact path="/messages" render={() =>
+            <Messages
+              randomUsers={this.state.randomUsers}
+              onSelectUser={this.handleSelectUser} />}
           />
           <Route exact path="/chat" render={() =>
             <Chat
@@ -230,9 +230,9 @@ class App extends Component {
               onSelectUser={this.handleSelectUser} />}
           />
           <Route exact path="/profile" render={() =>
-            <Profile 
-              user={this.state.selectedUser} 
-              settings={this.state.settings} />} 
+            <Profile
+              user={this.state.selectedUser}
+              settings={this.state.settings} />}
           />
         </Switch>
       </>
