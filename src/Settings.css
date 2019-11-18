@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    padding-top: 25vh;
+    padding-top: 20vh;
     background-image: url(https://i.imgur.com/OZvlyMS.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,9 +12,9 @@
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    width: 100%;
+    justify-content: center;
     font-size: 24px;
-    color: #fd267d; 
+    color: #fd267d;
 }
 
 .settingsItem {
@@ -22,6 +22,18 @@ h2 {
     font-size: 20px;
     text-align: center;
     color: #ff7854;
+    width: 130px;
+}
+
+.first-setting {
+    display: flex;
+    padding: 21px;
+    width: 12%;
+    padding-top: 8vh;
+    font-size: 24px;
+    border-bottom-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
 }
 
 .setting {
@@ -34,14 +46,16 @@ h2 {
     border-width: 1px;
 }
 
+.last-setting {
+    display: flex;
+    padding: 21px;
+    width: 12%;
+    font-size: 24px;
+}
+
 
 .ui.toggle.checkbox input:checked ~ .box::before, .ui.toggle.checkbox input:checked ~ label::before {
     background-color: #E94B65!important;}
 
 .ui.toggle.checkbox input:focus:checked~.box:before, .ui.toggle.checkbox input:focus:checked~label:before {
     background-color: #E94B65!important;}
-
-
-.settingsItem{
-    width: 130px;
-}

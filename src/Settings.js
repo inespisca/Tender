@@ -30,7 +30,7 @@ const Settings = ({ settings, onChange }) => {
             </div>
             <div className="border">
             </div>
-            <div className="setting">
+            <div className="last-setting">
                 <p className="settingsItem">
                     Single:
                 </p>
