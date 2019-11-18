@@ -1,11 +1,11 @@
 .chat {
     display: flex;
-    height: 80vh;
+    height: 88vh;
 }
 
 .chat-spaceForMessages {
     flex-grow: 1;
-    height: 88vh;
+    height: 91vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -32,20 +32,22 @@
     padding: 15px;
     outline: none;
     resize: none;
+    max-height: 144px;
+    overflow-y: auto;
 }
 
 .chat-sendButton {
     align-items: flex-end;
     border-style: none;
     border-radius: 5px;
-    background-color: #EC9993;
+    background-color: #ff7854;
     padding: 15px;
     padding-left: 25px;
     padding-right: 25px;
     font-size: 2vh;
     color: white;
     margin-left: 15px;
-    margin-right: 25px;
+    margin-right: 30px;
     letter-spacing: 1px;
     box-shadow: 2px 2px #C0C0C0;
     outline: none;

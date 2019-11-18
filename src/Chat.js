@@ -10,7 +10,6 @@ class Chat extends Component {
     this.state = {
       userMessage: "",
       sentMessages: [],
-      timeNow: "still not changed",
     };
   }
 
@@ -25,7 +24,6 @@ class Chat extends Component {
         return {
           ...state,
           sentMessages: [...state.sentMessages, [state.userMessage,  ]],
-          timeNow: new Date(),
           userMessage: "",
         }
       })
@@ -52,7 +50,8 @@ class Chat extends Component {
           </div>
 
           <form className="chat-chatForm">
-            <textarea
+            <input
+              type="text"
               className="chat-textArea"
               rows="2"
               value={this.state.userMessage}
