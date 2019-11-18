@@ -5,7 +5,6 @@ import './Profile.css';
 
 const Description = ({ user, settings }) => {
     const changeName = () => {
-        //ChangeTheName
         const valueChucknorris = user.description;
         let chuckNorrisName = 'Chuck Norris';
         let userName = user.name.first;
@@ -37,9 +36,5 @@ const Description = ({ user, settings }) => {
         </Container>
     )
 }
-
-// The div named Settings is where we write what appears when each setting appears as true or false. The props are passed from
-// const Description = ({ chuckNorrisQuote, settings and then to {settings.[setting name] + ternary operator for the answers in each case.
-// always remember to write first the sentence in case the settings' boolean is true and then the sentence in case the settings' boolean is false 
 
 export default Description;

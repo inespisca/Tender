@@ -112,14 +112,6 @@ class App extends Component {
         smoker: false,
         vegetarian: false,
         single: false,
-        // Settings' default boolean values. This part is connected directly to the Settings component (more info in the Settings.js file). The other parts
-        // related to settings are only connected after passing by Setting.js. So, long story short, it goes the following way:
-        // App.js (this.state) [default in page] -> Settings.js [where the functionality to change first the radio toggle appears] -> App (router) [it connects
-        // the functionalities present in Settings.js back to App.js and where it takes these settings to their final function: where we'll make user
-        // interaction possible, thanks to the use of handleChangeSetting] -> App.js (handleChangeSetting) [the final stage of the settings, where we make
-        // the radio toggle switch whenever the user clicks in it]
-
-        // this is for the female and male preference on settings
         female: true,
         male: true
 
@@ -175,9 +167,6 @@ class App extends Component {
       )
   }
 
-  // Thanks to this part below, the user clicks in the settings toggle and the toggle turns true or false depending on the times they click.
-  // The handleChangeSetting below is connected to the Settings component thanks to the line {this.handleChangeSetting in the Router in the App}
-
   handleChangeSetting = (settingName) => {
     this.setState((state) => {
       return {
@@ -190,7 +179,6 @@ class App extends Component {
     })
   };
 
-
   handleSelectUser = (clickedUser, nextRoute) => {
     this.setState({ selectedUser: clickedUser }, () => {
       if (nextRoute) {
@@ -198,7 +186,6 @@ class App extends Component {
       }
     });
   }
-
 
   render() {
     return (
@@ -221,8 +208,5 @@ class App extends Component {
     );
   }
 }
-// "settings={this.state.settings}" is being passed in both "Home" and "Settings" paths. In the "Settings" path, it's connected to make the settings
-// component and to link it to the radio toggles so the toggles control what's going on. In the "Home" path, it's meant to pass the props to the Homepage
-// and, therefore, to the "Description" component, so the sentence controlled by the settings appears in the description.
 
 export default withRouter(App);
