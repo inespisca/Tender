@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right;
-    background-size: cover;
+    background-size: 60%;
 }
 
 .looking-for {
@@ -22,7 +22,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     text-align: left;
-    color: black;   
+    color: black;
     width: 130px;
 }
 
@@ -57,6 +57,20 @@
     font-size: 24px;
 }
 
+.settings-container {
+    padding: 20vh 0;
+    align-items: center;
+}
+.first-setting {
+    width: 20%
+}
+.setting {
+    width: 20%;
+}
+.last-setting {
+    width: 20%;
+}
+
 
 .ui.toggle.checkbox input:checked ~ .box::before, .ui.toggle.checkbox input:checked ~ label::before {
     background-color: #E94B65!important;}
@@ -65,87 +79,23 @@
     background-color: #E94B65!important;}
 
 @media only screen and (max-width: 600px) {
-    .settings-container {
-        padding-top: 10vh;
-        align-items: center;
-        background-size: 100%;
-    }
+
     .first-setting {
-        width: 40%;
+        width: 80%;
     }
     .setting {
-        width: 40%;
+        width: 80%;
     }
     .last-setting {
-        width: 40%;
+        width: 80%;
     }
     .settings-item {
-        text-align: center;
+        text-align: left;
     }
+
+
 }
 
-@media only screen and (min-width: 600px) {
-    .settings-container {
-        padding-top: 12vh;
-        align-items: center;
-        background-size: 100%;
-    }
-    .first-setting {
-        width: 35%;
-    }
-    .setting {
-        width: 35%;
-    }
-    .last-setting {
-        width: 35%;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .settings-container {
-        padding-top: 15vh;
-        align-items: center;
-    }
-    .first-setting {
-        width: 30%;
-    }
-    .setting {
-        width: 30%;
-
-    }
-    .last-setting {
-        width: 30%;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .settings-container {
-        padding-top: 17vh;
-        align-items: center;
-    }
-    .first-setting {
-        width: 25%;
-    }
-    .setting {
-        width: 25%;
-    }
-    .last-setting {
-        width: 25%;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .settings-container {
-        padding-top: 20vh;
-        align-items: center;
-    }
-    .first-setting {
-        width: 20%
-    }
-    .setting {
-        width: 20%;
-    }
-    .last-setting {
-        width: 20%;
-    }
+@media only screen and (max-width: 425px) {
+    .settings-container{  background-size: 0px;}
 }
