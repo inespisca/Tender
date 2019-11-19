@@ -17,18 +17,22 @@ const Description = ({ user, settings }) => {
     return (
         <Container>
             <Row>
-                <Col md={12} xs={12} className="description">
-                    <div className="profile-name">
-                        <span>{user.name.first} {user.name.last}</span> - <span>{user.dob.age} y/o</span>
-                        <br /><h4 className="profile-quote">{changeName()}</h4>
+                <Col md={12} xs={12}>
+                    <div className="profile-name profile-container">
+                        <div className="description">
+                            <span>{user.name.first} {user.name.last}</span> - <span>{user.dob.age} y/o</span>
+                            <br /><h4 className="profile-quote"> {changeName()}</h4>
+                        </div>
                     </div>
+
                     {
                         (user.name.first !== "Angélina" && user.name.first !== "Inês" && user.name.first !== "Elena" && user.name.first !== "Alexandra") &&
-                        <>
-                            <p className="profile-settings">{settings.smoker ? "-Smoker-" : "-Non smoker-"}</p>
-                            <p className="profile-settings">{settings.vegetarian ? "-Vegetarian-" : "-Non vegetarian-"}</p>
-                            <p className="profile-settings">{settings.single ? "-Single-" : "-Married-"}</p>
-                        </>
+                        <div className="profile-settings">
+
+                            <p>{settings.smoker ? "-Smoker-" : "-Non smoker-"}</p>
+                            <p>{settings.vegetarian ? "-Vegetarian-" : "-Non vegetarian-"}</p>
+                            <p>{settings.single ? "-Single-" : "-Married-"}</p>
+                        </div>
                     }
                 </Col>
             </Row>
