@@ -38,8 +38,8 @@ class Chat extends Component {
 
   render() {
     return (
-      // <div className="chat">
-      <>
+      <div className="chat">
+      
         <div className="chat-contacts">
           <Messages 
             randomUsers={this.props.randomUsers} 
@@ -69,9 +69,7 @@ class Chat extends Component {
               onClick={this.sendMessageNow} />
           </form>
         </div>
-        </>
-
-      // </div>
+       </div>
 
     );
   }
