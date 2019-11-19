@@ -7,7 +7,7 @@ return(
     <div className="chat-noMessages">
         <img
         className="tenderLogo" 
-        src="https://res.cloudinary.com/ddoc8nfxb/image/upload/v1573925533/ff7854heart_mhabmy.png" alt="Tender Logo"></img>
+        src="https://res.cloudinary.com/ddoc8nfxb/image/upload/v1574167393/FE5963heart_t8shrn.png" alt="Tender Logo"></img>
         <h1> Go ahead, send them a message. <br/> Don't be shy! </h1>
 
     </div>
