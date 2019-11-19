@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Tender/static/css/main.08ffffd9.chunk.css",
-    "main.js": "/Tender/static/js/main.defb4a87.chunk.js",
-    "main.js.map": "/Tender/static/js/main.defb4a87.chunk.js.map",
+    "main.css": "/Tender/static/css/main.0743d2a1.chunk.css",
+    "main.js": "/Tender/static/js/main.e693cc5c.chunk.js",
+    "main.js.map": "/Tender/static/js/main.e693cc5c.chunk.js.map",
     "runtime-main.js": "/Tender/static/js/runtime-main.2075d0ef.js",
     "runtime-main.js.map": "/Tender/static/js/runtime-main.2075d0ef.js.map",
     "static/css/2.510409cd.chunk.css": "/Tender/static/css/2.510409cd.chunk.css",
-    "static/js/2.1ef1c831.chunk.js": "/Tender/static/js/2.1ef1c831.chunk.js",
-    "static/js/2.1ef1c831.chunk.js.map": "/Tender/static/js/2.1ef1c831.chunk.js.map",
+    "static/js/2.8b7e211b.chunk.js": "/Tender/static/js/2.8b7e211b.chunk.js",
+    "static/js/2.8b7e211b.chunk.js.map": "/Tender/static/js/2.8b7e211b.chunk.js.map",
     "index.html": "/Tender/index.html",
-    "precache-manifest.90f3cb2613c610fd2aed6fa8e56111cb.js": "/Tender/precache-manifest.90f3cb2613c610fd2aed6fa8e56111cb.js",
+    "precache-manifest.5c653fba26437685f23c16aa3a991f04.js": "/Tender/precache-manifest.5c653fba26437685f23c16aa3a991f04.js",
     "service-worker.js": "/Tender/service-worker.js",
     "static/css/2.510409cd.chunk.css.map": "/Tender/static/css/2.510409cd.chunk.css.map",
-    "static/css/main.08ffffd9.chunk.css.map": "/Tender/static/css/main.08ffffd9.chunk.css.map"
+    "static/css/main.0743d2a1.chunk.css.map": "/Tender/static/css/main.0743d2a1.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.2075d0ef.js",
     "static/css/2.510409cd.chunk.css",
-    "static/js/2.1ef1c831.chunk.js",
-    "static/css/main.08ffffd9.chunk.css",
-    "static/js/main.defb4a87.chunk.js"
+    "static/js/2.8b7e211b.chunk.js",
+    "static/css/main.0743d2a1.chunk.css",
+    "static/js/main.e693cc5c.chunk.js"
   ]
 }

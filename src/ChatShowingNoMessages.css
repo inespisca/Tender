@@ -9,15 +9,11 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     text-align: center;
-    color: #EC9993; 
+    color: #FE5963; 
     
 }
 .tenderLogo{
     max-width: 35vw;
-    opacity: 0.2;
+    opacity: 0.5;
 
-}
-
-.yesButtons{
-    display: block;
 }

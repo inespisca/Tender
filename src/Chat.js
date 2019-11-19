@@ -10,7 +10,6 @@ class Chat extends Component {
     this.state = {
       userMessage: "",
       sentMessages: [],
-      timeNow: "still not changed",
     };
   }
 
@@ -25,7 +24,6 @@ class Chat extends Component {
         return {
           ...state,
           sentMessages: [...state.sentMessages, [state.userMessage,  ]],
-          timeNow: new Date(),
           userMessage: "",
         }
       })
@@ -43,16 +41,23 @@ class Chat extends Component {
       <div className="chat">
 
         <div className="chat-contacts">
-          <Messages randomUsers={this.props.randomUsers} onSelectUser={this.props.onSelectUser} />
+          <Messages 
+            randomUsers={this.props.randomUsers} 
+            onSelectUser={this.props.onSelectUser} 
+          />
         </div>
 
         <div className="chat-spaceForMessages">
-          <div className="chat-spaceForMessagesScroll">
-            <ChatMessagesDisplay sentMessages={this.state.sentMessages} timeNow={this.state.timeNow} user={this.props.user}/>
+          <div className="chat-spaceForMessagesScroll" id="chat-spaceForMessagesScroll-scrollable">
+            <ChatMessagesDisplay 
+              sentMessages={this.state.sentMessages} 
+              user={this.props.user}
+            />
           </div>
 
           <form className="chat-chatForm">
-            <textarea
+            <input
+              type="text"
               className="chat-textArea"
               rows="2"
               value={this.state.userMessage}
@@ -71,4 +76,4 @@ class Chat extends Component {
   }
 }
 
-export default Chat; 
+export default Chat;
