@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './Home.css';
-import Description from './Description';
 import MatchText from './MatchText';
-import { isContainer } from 'postcss-selector-parser';
 import { Container, Row, Col } from "react-bootstrap";
 
 const Home = ({ randomUser, newUser, settings, onSelectUser, user }) => {
@@ -51,7 +49,7 @@ const Home = ({ randomUser, newUser, settings, onSelectUser, user }) => {
                                     <img className={handleClassName()} onClick={() => onSelectUser(user, '/profile')} src={randomUser.picture.large} alt="Tender user" />
                                     <div className="arrow">
                                         <i className={isDecided ? "off-buttons" : "fas fa-chevron-right d-xl-none"} onClick={handleMatch}></i>
-                                        <p className={isDecided ? "off-buttons" : "right d-none d-xl-block"} onClick={handleMatch}> <sub className="rose"> Marry me!</sub></p>
+                                        <p className={isDecided ? "off-buttons" : "right d-none d-xl-block"} onClick={handleMatch}>Marry me!</p>
                                     </div>
                                 </div>
                             </Col>

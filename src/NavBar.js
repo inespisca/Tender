@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MDBNavbar, NavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBContainer, NavbarBrand }
+import { MDBNavbar, NavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, NavbarBrand }
   from 'mdbreact';
 import './NavBar.css';
 
@@ -30,7 +30,7 @@ class NavBar extends Component {
               <img className="logo-tender" src={"https://res.cloudinary.com/ddoc8nfxb/image/upload/v1574074799/ffffffheart_fhfafu.png"} style={{ width: 50 }} alt="Tender Logo" />
               <span className="app-name">Tender</span></NavbarBrand>
             <div className="navbar-ic">
-            <MDBNavbarToggler className="navbar-icon"onClick={this.toggleCollapse('navbarCollapse1')} />
+              <MDBNavbarToggler className="navbar-icon" onClick={this.toggleCollapse('navbarCollapse1')} />
             </div>
             <MDBCollapse id="navbarCollapse1" isOpen={this.state.collapseID} navbar>
               <NavbarNav left>
@@ -41,7 +41,7 @@ class NavBar extends Component {
                   <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/settings"><span className="link-menu">Settings</span></MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink  onClick={this.toggleCollapse('navbarCollapse1')} exact to="/messages"><span className="link-menu">Messages</span></MDBNavLink>
+                  <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/messages"><span className="link-menu">Messages</span></MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
                   <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/chat"><span className="link-menu">Chat</span></MDBNavLink>
