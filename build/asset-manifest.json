@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Tender/static/css/main.08ffffd9.chunk.css",
+    "main.js": "/Tender/static/js/main.defb4a87.chunk.js",
+    "main.js.map": "/Tender/static/js/main.defb4a87.chunk.js.map",
+    "runtime-main.js": "/Tender/static/js/runtime-main.2075d0ef.js",
+    "runtime-main.js.map": "/Tender/static/js/runtime-main.2075d0ef.js.map",
+    "static/css/2.510409cd.chunk.css": "/Tender/static/css/2.510409cd.chunk.css",
+    "static/js/2.1ef1c831.chunk.js": "/Tender/static/js/2.1ef1c831.chunk.js",
+    "static/js/2.1ef1c831.chunk.js.map": "/Tender/static/js/2.1ef1c831.chunk.js.map",
+    "index.html": "/Tender/index.html",
+    "precache-manifest.90f3cb2613c610fd2aed6fa8e56111cb.js": "/Tender/precache-manifest.90f3cb2613c610fd2aed6fa8e56111cb.js",
+    "service-worker.js": "/Tender/service-worker.js",
+    "static/css/2.510409cd.chunk.css.map": "/Tender/static/css/2.510409cd.chunk.css.map",
+    "static/css/main.08ffffd9.chunk.css.map": "/Tender/static/css/main.08ffffd9.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2075d0ef.js",
+    "static/css/2.510409cd.chunk.css",
+    "static/js/2.1ef1c831.chunk.js",
+    "static/css/main.08ffffd9.chunk.css",
+    "static/js/main.defb4a87.chunk.js"
+  ]
+}
