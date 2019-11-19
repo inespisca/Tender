@@ -26,7 +26,7 @@ class NavBar extends Component {
       <div>
         <main>
           <MDBNavbar className="navBarCustom" color="light-blue lighten-3" light fixed="top">
-            <NavbarBrand className="nav-size" href="/" onClick={this.clickLogo}>
+            <NavbarBrand className="nav-size" href="/Tender" onClick={this.clickLogo}>
               <img className="logo-tender" src={"https://res.cloudinary.com/ddoc8nfxb/image/upload/v1574074799/ffffffheart_fhfafu.png"} style={{ width: 50 }} alt="Tender Logo" />
               <span className="app-name">Tender</span></NavbarBrand>
             <div className="navbar-ic">
@@ -35,7 +35,7 @@ class NavBar extends Component {
             <MDBCollapse id="navbarCollapse1" isOpen={this.state.collapseID} navbar>
               <NavbarNav left>
                 <MDBNavItem>
-                  <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/"> <span className="link-menu">Home</span></MDBNavLink>
+                  <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/Tender"> <span className="link-menu">Home</span></MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
                   <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/settings"><span className="link-menu">Settings</span></MDBNavLink>
