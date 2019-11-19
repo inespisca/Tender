@@ -41,12 +41,18 @@ class Chat extends Component {
       <div className="chat">
 
         <div className="chat-contacts">
-          <Messages randomUsers={this.props.randomUsers} onSelectUser={this.props.onSelectUser} />
+          <Messages 
+            randomUsers={this.props.randomUsers} 
+            onSelectUser={this.props.onSelectUser} 
+          />
         </div>
 
         <div className="chat-spaceForMessages">
-          <div className="chat-spaceForMessagesScroll">
-            <ChatMessagesDisplay sentMessages={this.state.sentMessages} timeNow={this.state.timeNow} user={this.props.user}/>
+          <div className="chat-spaceForMessagesScroll" id="chat-spaceForMessagesScroll-scrollable">
+            <ChatMessagesDisplay 
+              sentMessages={this.state.sentMessages} 
+              user={this.props.user}
+            />
           </div>
 
           <form className="chat-chatForm">
@@ -70,4 +76,4 @@ class Chat extends Component {
   }
 }
 
-export default Chat; 
+export default Chat;

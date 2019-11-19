@@ -8,8 +8,8 @@ const ChatMessagesDisplay = ({sentMessages, user}) => {
     if(user.message){ 
         return (
             <>
-            <ChatTenderUser user={user}/>
-            <ChatMessages sentMessages={sentMessages}/>
+                <ChatTenderUser user={user}/>
+                <ChatMessages sentMessages={sentMessages}/>
             </>
         )
     }else if
