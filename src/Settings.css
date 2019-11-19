@@ -21,8 +21,8 @@
 .settingsItem {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    text-align: center;
-    color: black;
+    text-align: left;
+    color: black;   
     width: 130px;
 }
 
