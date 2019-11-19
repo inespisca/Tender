@@ -192,7 +192,7 @@ class App extends Component {
       <>
         <NavBar newUser={this.getUser} />
         <Switch>
-          <Route exact path="/" render={() =>
+          <Route exact path="/Tender" render={() =>
             <Home
               randomUser={this.state.selectedUser}
               user={this.state.selectedUser}
