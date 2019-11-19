@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import './Home.css';
-import Description from './Description';
 import MatchText from './MatchText';
-import { isContainer } from 'postcss-selector-parser';
 import { Container, Row, Col } from "react-bootstrap";
 
-const Home = ({ randomUser, newUser, settings, onSelectUser, user}) => {
+const Home = ({ randomUser, newUser, settings, onSelectUser, user }) => {
 
     const [isMatch, setIsMatch] = useState(false)
     const [isDecided, setIsDecided] = useState(false)
@@ -36,38 +34,38 @@ const Home = ({ randomUser, newUser, settings, onSelectUser, user}) => {
 
     return (
         <>
-          <div className="homeCentered">
+            <div className="homeCentered">
                 <Container>
-                
+
                     {
                         randomUser.name !== undefined &&
-                    <Row>
-                        <Col xs={12} md={12}>
-                            <div className="d-flex justify-content-between align-items-center">
-                                <div className="arrow left">
-                                    <i className= {isDecided ? "off-buttons" : "fas fa-chevron-left d-xl-none" } onClick={handleNewUser}></i>
-                                    <p className={isDecided ? "off-buttons" :"left d-none d-xl-block"} onClick={handleNewUser}> <sub className="rose"></sub> Next!!! <sub className="rose"></sub></p>
+                        <Row>
+                            <Col xs={12} md={12}>
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <div className="arrow left">
+                                        <i className={isDecided ? "off-buttons" : "fas fa-chevron-left d-xl-none"} onClick={handleNewUser}></i>
+                                        <p className={isDecided ? "off-buttons" : "left d-none d-xl-block"} onClick={handleNewUser}> <sub className="rose"></sub> Next!!! <sub className="rose"></sub></p>
+                                    </div>
+                                    <img className={handleClassName()} onClick={() => onSelectUser(user, '/profile')} src={randomUser.picture.large} alt="Tender user" />
+                                    <div className="arrow">
+                                        <i className={isDecided ? "off-buttons" : "fas fa-chevron-right d-xl-none"} onClick={handleMatch}></i>
+                                        <p className={isDecided ? "off-buttons" : "right d-none d-xl-block"} onClick={handleMatch}>Marry me!</p>
+                                    </div>
                                 </div>
-                                    <img className={handleClassName()} onClick={() => onSelectUser(user, '/profile')} src={randomUser.picture.large} alt="Tender user" />  
-                                <div className="arrow">    
-                                    <i className={isDecided ? "off-buttons" : "fas fa-chevron-right d-xl-none" } onClick={handleMatch}></i> 
-                                    <p className={isDecided ? "off-buttons" :"right d-none d-xl-block"}  onClick={handleMatch}> <sub className="rose">&tilde;</sub> Marry me <sub className="rose">&tilde;</sub></p> 
-                                </div>  
-                            </div>                                
-                        </Col>
-                    </Row>
+                            </Col>
+                        </Row>
                     }
                     <Row>
                         <Col xs={12} md={12}>
-                            <div className={isDecided ? "off-buttons" :"text-center name"}>
+                            <div className={isDecided ? "off-buttons" : "text-center name"}>
                                 <p> {user.name.first}, {user.dob.age} y.o. </p>
                             </div>
                         </Col>
                     </Row>
-                    
-            { isDecided &&
-                <MatchText isMatch={isMatch} handleNewUser={handleNewUser} isDecided={isDecided}/>
-            }
+
+                    {isDecided &&
+                        <MatchText isMatch={isMatch} handleNewUser={handleNewUser} isDecided={isDecided} />
+                    }
                 </Container>
             </div>
         </>

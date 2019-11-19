@@ -1,29 +1,21 @@
 .profile-container{
     display: flex;
+    justify-content: center;
     text-align: center;
     width: 80%;
+  
 }
 
 .profile-pict{
-    
     text-align: center;
+    
 }
 
 .pict{
     width:300px;
-    border: 2px solid lightgray;
-}
-
-.social-links{
-    display: flex;
-    justify-content: center;
-}
-
-.social-link{
-    padding:5px; 
-}
-.description{
-    text-align: center;
+    border: 3px solid lightgray;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.27); 
+    cursor:pointer;
 }
 
 .profile-name{
@@ -31,16 +23,54 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
+.description{
+    text-align: center;
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+.fab{
+    color: #fd267d;
+    font-size: 20px;
+}
+.social-link{
+    padding:5px; 
+}
 
 .profile-settings{
     display: inline;
     padding: 10px;
+    text-align: justify;
+}
+.profile-description-size {
+    width: 45%;
+    margin: 12px auto;
+    text-align: justify;
 }
 
-.profile-quote{
-    font-size:16px;
+
+.chatBtn-style{
+    text-align: center;
+    font-style: italic;
+    background: linear-gradient(262deg, #ff7854, #fd267d);
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.27);
+    cursor:pointer;
+    min-width: 84px;
+    max-width: 84px;
 }
 
-.profile-goToChatBtn{
-  text-align: center;
+.chat-btn {
+    width: 100%;
+    margin: 19px auto;
+    display: inline-block;
+    text-align: center;
 }
+
+.chatBtn-style:hover{background: #fd5068;
+    background: linear-gradient(262deg, #fd5068, #fd5068);
+    transition: all ease 0.8s, }

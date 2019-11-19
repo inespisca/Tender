@@ -20,16 +20,6 @@
     filter: brightness(150%);
 }
 
-button{
-    background-color: #EC9993;
-    width:200px;
-    color:white;
-    font-weight:bold;
-    border:none;
-    padding:10px;
-    cursor:pointer;
-}
-
 
 .moreInfo h4{ 
     text-align: center; 
