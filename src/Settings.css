@@ -4,52 +4,57 @@
     width: 100%;
     align-items: center;
     padding-top: 20vh;
-    background-image: url(https://i.imgur.com/OZvlyMS.png);
+    padding-bottom: 6vh;
+    background-image: url(https://i.imgur.com/kXBNh0H.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right;
+    background-size: cover;
 }
 
-h2 {
+.looking-for {
     font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    color: black;
     justify-content: center;
-    font-size: 24px;
-    color: #fd267d;
 }
 
 .settingsItem {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     text-align: center;
-    color: #ff7854;
+    color: black;
     width: 130px;
 }
 
 .first-setting {
     display: flex;
-    padding: 21px;
-    width: 12%;
-    padding-top: 8vh;
+    padding: 20px;
+    justify-content: space-evenly;
+    width: 50%;
     font-size: 24px;
+    padding-top: 8vh;
     border-bottom-style: solid;
-    border-color: #cccccc;
+    border-color: #696969;
     border-width: 1px;
 }
 
 .setting {
     display: flex;
-    padding: 21px;
-    width: 12%;
+    padding: 20px;
+    justify-content: space-evenly;
+    width: 50%;
     font-size: 24px;
     border-bottom-style: solid;
-    border-color: #cccccc;
+    border-color: #696969;
     border-width: 1px;
 }
 
 .last-setting {
     display: flex;
-    padding: 21px;
-    width: 12%;
+    padding: 20px;
+    justify-content: space-evenly;
+    width: 50%;
     font-size: 24px;
 }
 
@@ -62,15 +67,85 @@ h2 {
 
 @media only screen and (max-width: 600px) {
     .settings-container {
-        align-items: inherit;
+        padding-top: 10vh;
+        align-items: center;
+        background-size: 100%;
     }
     .first-setting {
-        border-bottom-style:none;
+        width: 40%
     }
     .setting {
-        border-bottom-style:none;
+        width: 40%
+    }
+    .last-setting {
+        width: 40%
     }
     .settings-item {
         text-align: center;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .settings-container {
+        padding-top: 12vh;
+        align-items: center;
+        background-size: 100%;
+    }
+    .first-setting {
+        width: 35%
+    }
+    .setting {
+        width: 35%
+    }
+    .last-setting {
+        width: 35%
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .settings-container {
+        padding-top: 15vh;
+        align-items: center;
+    }
+    .first-setting {
+        width: 30%
+    }
+    .setting {
+        width: 30%
+    }
+    .last-setting {
+        width: 30%
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .settings-container {
+        padding-top: 17vh;
+        align-items: center;
+    }
+    .first-setting {
+        width: 25%
+    }
+    .setting {
+        width: 25%
+    }
+    .last-setting {
+        width: 25%
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .settings-container {
+        padding-top: 20vh;
+        align-items: center;
+    }
+    .first-setting {
+        width: 20%
+    }
+    .setting {
+        width: 20%
+    }
+    .last-setting {
+        width: 20%
     }
 }
