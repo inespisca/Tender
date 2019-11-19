@@ -1,14 +1,16 @@
-.chat {
+/* .chat {
     display: flex;
-    height: 1vh;
-}
+    height: 100%;
+    width: 100%;
+} */
 
 .chat-spaceForMessages {
+    display: flex;
     flex-grow: 1;
-    height: 91vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    height: 91vh;
 }
 .chat-spaceForMessagesScroll{
     overflow-y: scroll;
@@ -65,10 +67,9 @@
     display: none;  
     }
 }
-body{
-    height: 0%;
-}
 
 @media only screen and (max-width: 475px){
-    .chat-chatForm { padding: 0px!important; margin-left:0px!important;}
+    .chat-chatForm { padding: 0px!important; margin-left:0px!important; position: fixed; bottom: 0px;}
+    /* .chat-spaceForMessages { dis } */
+
 }
