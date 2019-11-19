@@ -27,7 +27,7 @@ const ourselves = [
       LinkedIn: 'https://www.linkedin.com/in/alexandrapatriciosantos/',
       GitHub: 'https://github.com/alexandrapatriciosantos',
     },
-    description: "I like long walks on the beach, MDN web docs, and proper indentation. Dislikes: infinite loops, \"failed to render\" messages, and coding in the master branch. I am currently studying at Wild Code School, learning all about JavaScript, React, and SQL. I'm really busy right now, but I'd love to meet for a drink after school some time. If you're up for it email me at alexandraps17@gmail.com . Speaks: Portuguese, Japanese, HTML, CSS, JS, and JSX. My favourite movie is Mean Girls. I can make a great Carbonara.",
+    description: "I like long walks on the beach, MDN web docs, and proper indentation. Dislikes: infinite loops, \"failed to render\" messages, and coding in the master branch.",
     dob: {
       age: 25
     }
