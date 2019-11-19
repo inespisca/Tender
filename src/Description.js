@@ -20,7 +20,7 @@ const Description = ({ user, settings }) => {
                 <Col md={12} xs={12}>
                     <div className="profile-name profile-container">
                         <div className="description">
-                            <span>{user.name.first} {user.name.last}</span> - <span>{user.dob.age} y/o</span>
+                            <span>{user.name.first} {user.name.last}</span><br /><span>{user.dob.age} y.o.</span>
                             <br /><h4 className="profile-quote"> {changeName()}</h4>
                         </div>
                     </div>
