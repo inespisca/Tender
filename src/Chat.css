@@ -68,3 +68,7 @@
 body{
     height: 0%;
 }
+
+@media only screen and (max-width: 475px){
+    .chat-chatForm { padding: 0px!important; margin-left:0px!important;}
+}
