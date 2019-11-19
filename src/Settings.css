@@ -4,7 +4,6 @@
     width: 100%;
     align-items: center;
     padding-top: 20vh;
-    padding-bottom: 6vh;
     background-image: url(https://i.imgur.com/kXBNh0H.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -21,7 +20,7 @@
 
 .settingsItem {
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     color: black;
     width: 130px;
@@ -29,30 +28,30 @@
 
 .first-setting {
     display: flex;
-    padding: 20px;
+    padding: 10px;
     justify-content: space-evenly;
     width: 50%;
-    font-size: 24px;
-    padding-top: 8vh;
+    font-size: 18px;
+    padding-top: 5vh;
     border-bottom-style: solid;
-    border-color: #696969;
+    border-color: #a6a6a6;
     border-width: 1px;
 }
 
 .setting {
     display: flex;
-    padding: 20px;
+    padding: 10px;
     justify-content: space-evenly;
     width: 50%;
-    font-size: 24px;
+    font-size: 18px;
     border-bottom-style: solid;
-    border-color: #696969;
+    border-color: #a6a6a6;
     border-width: 1px;
 }
 
 .last-setting {
     display: flex;
-    padding: 20px;
+    padding: 10px;
     justify-content: space-evenly;
     width: 50%;
     font-size: 24px;
@@ -72,13 +71,13 @@
         background-size: 100%;
     }
     .first-setting {
-        width: 40%
+        width: 40%;
     }
     .setting {
-        width: 40%
+        width: 40%;
     }
     .last-setting {
-        width: 40%
+        width: 40%;
     }
     .settings-item {
         text-align: center;
@@ -92,13 +91,13 @@
         background-size: 100%;
     }
     .first-setting {
-        width: 35%
+        width: 35%;
     }
     .setting {
-        width: 35%
+        width: 35%;
     }
     .last-setting {
-        width: 35%
+        width: 35%;
     }
 }
 
@@ -108,13 +107,14 @@
         align-items: center;
     }
     .first-setting {
-        width: 30%
+        width: 30%;
     }
     .setting {
-        width: 30%
+        width: 30%;
+
     }
     .last-setting {
-        width: 30%
+        width: 30%;
     }
 }
 
@@ -124,13 +124,13 @@
         align-items: center;
     }
     .first-setting {
-        width: 25%
+        width: 25%;
     }
     .setting {
-        width: 25%
+        width: 25%;
     }
     .last-setting {
-        width: 25%
+        width: 25%;
     }
 }
 
@@ -143,9 +143,9 @@
         width: 20%
     }
     .setting {
-        width: 20%
+        width: 20%;
     }
     .last-setting {
-        width: 20%
+        width: 20%;
     }
 }
