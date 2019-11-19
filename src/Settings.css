@@ -59,3 +59,18 @@ h2 {
 
 .ui.toggle.checkbox input:focus:checked~.box:before, .ui.toggle.checkbox input:focus:checked~label:before {
     background-color: #E94B65!important;}
+
+@media only screen and (max-width: 600px) {
+    .settings-container {
+        align-items: inherit;
+    }
+    .first-setting {
+        border-bottom-style:none;
+    }
+    .setting {
+        border-bottom-style:none;
+    }
+    .settings-item {
+        text-align: center;
+    }
+}
