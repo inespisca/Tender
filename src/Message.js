@@ -16,13 +16,13 @@ const Message = ({ user, location, onSelectUser }) => {
     return (
 
         <div className="message">
-            <div className="message-pict" onClick={() => onSelectUser(user, 'Tender/profile')}>
+            <div className="message-pict" onClick={() => onSelectUser(user, 'profile')}>
                 <img src={user.picture.thumbnail} alt="Tender user" className="avatar" />
             </div>
-            <div className='message-name' onClick={() => onSelectUser(user, 'Tender/profile')}>
+            <div className='message-name' onClick={() => onSelectUser(user, 'profile')}>
                 {user.name.first} {user.name.last}
             </div>
-            <div className="message-content" onClick={() => onSelectUser(user, 'Tender/chat')}>
+            <div className="message-content" onClick={() => onSelectUser(user, 'chat')}>
                 {formatMessage()}
             </div>
             <div className="message-date">
