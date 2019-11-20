@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d431cad9f5ec512b5ba728c78c62db57",
+    "revision": "aab6c9611fb68a57ebf9bc4441bc936e",
     "url": "/Tender/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Tender/static/css/2.510409cd.chunk.css"
   },
   {
-    "revision": "2cbf99ed42598b6b58c0",
-    "url": "/Tender/static/css/main.fa5aae90.chunk.css"
+    "revision": "cd6bfd8e6ede5a61611a",
+    "url": "/Tender/static/css/main.1cd9eaac.chunk.css"
   },
   {
     "revision": "344e6590fb72f17ee53f",
     "url": "/Tender/static/js/2.8b7e211b.chunk.js"
   },
   {
-    "revision": "2cbf99ed42598b6b58c0",
-    "url": "/Tender/static/js/main.6cd5fbef.chunk.js"
+    "revision": "cd6bfd8e6ede5a61611a",
+    "url": "/Tender/static/js/main.e28fc923.chunk.js"
   },
   {
     "revision": "7883dbc8b14f3a784147",
