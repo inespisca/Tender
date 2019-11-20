@@ -9,7 +9,7 @@ const Profile = ({ user, settings }) => {
     let history = useHistory()
 
     const handleRedirectToChat = () => {
-        history.push("/chat");
+        history.push("/Tender/chat");
     }
 
     return (

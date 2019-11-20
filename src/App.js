@@ -190,7 +190,9 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavBar newUser={this.getUser} />
+        <NavBar 
+          newUser={this.getUser}
+        />
         <Switch>
           <Route exact path="/Tender" render={() =>
             <Home
@@ -200,23 +202,23 @@ class App extends Component {
               newUser={this.getUser}
               settings={this.state.settings} />}
           />
-          <Route exact path="/settings" render={() =>
+          <Route exact path="/Tender/settings" render={() =>
             <Settings
               settings={this.state.settings}
               onChange={this.handleChangeSetting} />}
           />
-          <Route exact path="/messages" render={() =>
+          <Route exact path="/Tender/messages" render={() =>
             <Messages
               randomUsers={this.state.randomUsers}
               onSelectUser={this.handleSelectUser} />}
           />
-          <Route exact path="/chat" render={() =>
+          <Route exact path="/Tender/chat" render={() =>
             <Chat
               randomUsers={this.state.randomUsers}
               user={this.state.selectedUser}
               onSelectUser={this.handleSelectUser} />}
           />
-          <Route exact path="/profile" render={() =>
+          <Route exact path="/Tender/profile" render={() =>
             <Profile
               user={this.state.selectedUser}
               settings={this.state.settings} />}
