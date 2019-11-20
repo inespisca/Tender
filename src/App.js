@@ -47,7 +47,7 @@ const ourselves = [
       LinkedIn: 'https://www.linkedin.com/in/angelinariet/',
       GitHub: 'https://github.com/AngelinaRIET',
     },
-    description: 'blablabla',
+    description: 'Autodidacte passionnée par l’informatique puis formée à la Wild Code School de Lisbonne, je suis à la recherche d’un stage sur Paris en développement web / mobile - React JS / React Native.',
     dob: {
       age: 28
     }

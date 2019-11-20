@@ -118,14 +118,10 @@
             text-align: center;
             width: 100%;
         }
-        .profile-pict{
-            display: flex;
-            width: auto;
-            margin: 0 auto;
-            text-align: center;
-        }
+       
         .pict{
-            max-width:50%;
+            width:60%;
+            height: auto;
         }
         .profile-name{
             font-size:16px;
