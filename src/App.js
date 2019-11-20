@@ -194,7 +194,7 @@ class App extends Component {
           newUser={this.getUser}
         />
         <Switch>
-          <Route exact path="" render={() =>
+          <Route exact path="/" render={() =>
             <Home
               randomUser={this.state.selectedUser}
               user={this.state.selectedUser}
