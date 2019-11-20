@@ -35,7 +35,7 @@ class NavBar extends Component {
             <MDBCollapse id="navbarCollapse1" isOpen={this.state.collapseID} navbar>
               <NavbarNav left>
                 <MDBNavItem>
-                  <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/Tender"> <span className="link-menu">Home</span></MDBNavLink>
+                  <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/"> <span className="link-menu">Home</span></MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
                   <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/settings"><span className="link-menu">Settings</span></MDBNavLink>
