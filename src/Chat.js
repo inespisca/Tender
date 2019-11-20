@@ -46,8 +46,7 @@ class Chat extends Component {
             onSelectUser={this.props.onSelectUser} 
           />
         </div>
-
-        <div className="chat-spaceForMessages">
+          <div className="chat-spaceForMessages">
           <div className="chat-spaceForMessagesScroll" id="chat-spaceForMessagesScroll-scrollable">
             <ChatMessagesDisplay 
               sentMessages={this.state.sentMessages} 
