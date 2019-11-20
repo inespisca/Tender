@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Tender/static/css/main.1cd9eaac.chunk.css",
-    "main.js": "/Tender/static/js/main.a6cade3d.chunk.js",
-    "main.js.map": "/Tender/static/js/main.a6cade3d.chunk.js.map",
+    "main.js": "/Tender/static/js/main.8f28a488.chunk.js",
+    "main.js.map": "/Tender/static/js/main.8f28a488.chunk.js.map",
     "runtime-main.js": "/Tender/static/js/runtime-main.2075d0ef.js",
     "runtime-main.js.map": "/Tender/static/js/runtime-main.2075d0ef.js.map",
     "static/css/2.510409cd.chunk.css": "/Tender/static/css/2.510409cd.chunk.css",
     "static/js/2.8b7e211b.chunk.js": "/Tender/static/js/2.8b7e211b.chunk.js",
     "static/js/2.8b7e211b.chunk.js.map": "/Tender/static/js/2.8b7e211b.chunk.js.map",
     "index.html": "/Tender/index.html",
-    "precache-manifest.8395245466051963ccb3a27543b87ed5.js": "/Tender/precache-manifest.8395245466051963ccb3a27543b87ed5.js",
+    "precache-manifest.c9d5544a4efa51cee23e482d1a98d137.js": "/Tender/precache-manifest.c9d5544a4efa51cee23e482d1a98d137.js",
     "service-worker.js": "/Tender/service-worker.js",
     "static/css/2.510409cd.chunk.css.map": "/Tender/static/css/2.510409cd.chunk.css.map",
     "static/css/main.1cd9eaac.chunk.css.map": "/Tender/static/css/main.1cd9eaac.chunk.css.map"
@@ -19,6 +19,6 @@
     "static/css/2.510409cd.chunk.css",
     "static/js/2.8b7e211b.chunk.js",
     "static/css/main.1cd9eaac.chunk.css",
-    "static/js/main.a6cade3d.chunk.js"
+    "static/js/main.8f28a488.chunk.js"
   ]
 }
