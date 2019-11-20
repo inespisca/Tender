@@ -35,16 +35,16 @@ class NavBar extends Component {
             <MDBCollapse id="navbarCollapse1" isOpen={this.state.collapseID} navbar>
               <NavbarNav left>
                 <MDBNavItem>
-                  <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/Tender"> <span className="link-menu">Home</span></MDBNavLink>
+                  <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/"> <span className="link-menu">Home</span></MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/Tender/settings"><span className="link-menu">Settings</span></MDBNavLink>
+                  <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/settings"><span className="link-menu">Settings</span></MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/Tender/messages"><span className="link-menu">Messages</span></MDBNavLink>
+                  <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/messages"><span className="link-menu">Messages</span></MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/Tender/chat"><span className="link-menu">Chat</span></MDBNavLink>
+                  <MDBNavLink onClick={this.toggleCollapse('navbarCollapse1')} exact to="/chat"><span className="link-menu">Chat</span></MDBNavLink>
                 </MDBNavItem>
               </NavbarNav>
             </MDBCollapse>
