@@ -3,6 +3,7 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 5vh;
 }
 
 h1 {
@@ -16,4 +17,10 @@ h1 {
     max-width: 35vw;
     opacity: 0.5;
 
+}
+@media screen and (max-width: 900px ){
+    .chat-noMessages{
+        margin-bottom: 15vh;
+
+    }
 }

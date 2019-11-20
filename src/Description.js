@@ -30,7 +30,7 @@ const Description = ({ user, settings }) => {
                         <div className="profile-settings">
 
                             <p>{settings.smoker ? "-Smoker-" : "-Non smoker-"}</p>
-                            <p>{settings.vegetarian ? "-Vegetarian-" : "-Non vegetarian-"}</p>
+                            <p>{settings.vegetarian ? "-Vegetarian-" : "-Carnivorous-"}</p>
                             <p>{settings.single ? "-Single-" : "-Married-"}</p>
                         </div>
                     }
