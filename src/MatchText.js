@@ -9,7 +9,7 @@ const MatchText = ({isMatch, handleNewUser, use}) => {
     let history = useHistory ()
 
     const handleRedirectToChat = () => {
-        history.push("/chat");
+        history.push("/Tender/chat");
         handleNewUser()
     }
 
