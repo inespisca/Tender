@@ -131,7 +131,7 @@
             width: auto;
         }
         .profile-quote{
-            font-size: 14px;
+            font-size: 16px;
             width: auto;
         }
         .chat-btn {
@@ -142,7 +142,7 @@
         .profile-settings{
             display: block;
             width: 100%;
-            font-size: 12px;
+            font-size: 14px;
         }
         .fab{
             font-size: 20px;

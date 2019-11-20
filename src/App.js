@@ -67,7 +67,7 @@ const ourselves = [
       LinkedIn: 'https://www.linkedin.com/in/inesfpoliveira/',
       GitHub: 'https://github.com/inespisca',
     },
-    description: 'blablabla',
+    description: 'Life is a paradox. I love languages but I hate how complicated they can be. I love IT but I hate it when devices take a break. I hate rain but I love walking in the rain.',
     dob: {
       age: 26
     }
@@ -81,13 +81,13 @@ const ourselves = [
       thumbnail: 'https://i.imgur.com/p9fIRKM.jpg',
       large: 'https://i.imgur.com/wuUXt6P.jpg',
     },
-    message: 'Holà que tal',
+    message: '¡Hola, mundo!',
     date: '3 nov.',
     contact: {
       LinkedIn: 'https://www.linkedin.com/in/elenaortegabaura/',
       GitHub: 'https://github.com/eobwebdevelop',
     },
-    description: 'blablabla',
+    description: "Always happy to translate mockups to HTML5 and CSS3. Now learning a lot about javaScript and React at Wild Code School of Lisbon.",
     dob: {
       age: 28
     }
