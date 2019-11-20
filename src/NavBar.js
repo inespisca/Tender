@@ -26,7 +26,7 @@ class NavBar extends Component {
       <div>
         <main>
           <MDBNavbar className="navBarCustom" color="light-blue lighten-3" light fixed="top">
-            <NavbarBrand className="nav-size" href="/Tender" onClick={this.clickLogo}>
+            <NavbarBrand className="nav-size" href="/" onClick={this.clickLogo}>
               <img className="logo-tender" src={"https://res.cloudinary.com/ddoc8nfxb/image/upload/v1574074799/ffffffheart_fhfafu.png"} style={{ width: 50 }} alt="Tender Logo" />
               <span className="app-name">Tender</span></NavbarBrand>
             <div className="navbar-ic">
