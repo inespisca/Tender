@@ -18,6 +18,8 @@ width: 100%;
 
 .chat-contacts{
     width: 30%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .chat-spaceForMessages{
@@ -90,4 +92,15 @@ width: 100%;
     .chat-sendButton {
         width: 30%;
     }
+
+    .chat-chatForm{
+        position: fixed;
+        bottom: 0;
+        margin-left: 0px;
+    }
+
+    .chat-spaceForMessagesScroll{
+        margin-bottom: 11vh;
+    }
+
 }
