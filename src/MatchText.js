@@ -4,7 +4,7 @@ import './Home.css';
 import { withRouter, useHistory } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 
-const MatchText = ({isMatch, handleNewUser, use}) => {
+const MatchText = ({isMatch, handleNewUser}) => {
 
     let history = useHistory ()
 
