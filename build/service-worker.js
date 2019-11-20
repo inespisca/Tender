@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Tender/precache-manifest.ff27973877f778775d906b61f264f187.js"
+  "/Tender/precache-manifest.7046036dc9f0fdcc031220614f59ceb4.js"
 );
 
 self.addEventListener('message', (event) => {
